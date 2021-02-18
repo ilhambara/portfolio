@@ -32,7 +32,7 @@ export default function Home() {
 
           <a href="https://dev.to/g2ailhammubarok" target="_blank" rel="noopener noreferrer" className={styles.card}>
             <h3>Blog &rarr;</h3>
-            <p>Not a good opinion and knowledge share but you'll get the point.</p>
+            <p>Not a very good opinion and knowledge share but you'll get the point.</p>
           </a>
 
           <a href="https://read.cv/ilhambara" target="_blank" rel="noopener noreferrer" className={styles.card}>
