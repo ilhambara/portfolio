@@ -73,6 +73,7 @@ export default function About() {
                         <h3 className={styles.text__title}>Socials</h3>
                         <ul className={styles.list__ul}>
                             <li>GitHub – <span className={styles.text__span}><a href="https://github.com/ilhambara" target="_blank">github.com/ilhambara</a></span></li>
+                            <li>Dev.to – <span className={styles.text__span}><a href="https://dev.to/ilhambara" target="_blank">dev.to/ilhambara</a></span></li>
                             <li>Twitter – <span className={styles.text__span}><a href="https://twitter.com/zgve679jdv" target="_blank">twitter.com/zgve679jdv</a></span></li>
                         </ul>
                     </div>
