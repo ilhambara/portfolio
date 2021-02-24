@@ -1,0 +1,148 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 5rem 0 0 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title a {
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: left;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  margin-left: 0.3rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.info {
+  margin-left: 3rem;
+}
+
+/* About Section */
+
+.background__about {
+  max-width: 800px;
+  height: max-content;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  background-color: #12151d;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 2rem;
+}
+
+.text__title {
+  margin: 0 0 1.5rem 0;
+  font-size: 2rem;
+}
+
+.text__desc {
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+}
+
+.techstacks {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 800px;
+  margin: 2rem;
+}
+
+.grid__display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid__elements {
+  overflow-wrap: break-word;
+}
+
+.list__ul {
+  list-style-type: none;
+  font-size: 1.15rem;
+  line-height: 1.625;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 2rem;
+}
+
+.text__span {
+  color: #1da1f2;
+  font-weight: 500;
+}
+
+.text__span:hover {
+  text-decoration: underline;
+}
+
+/* Back Button */
+
+.back__button {
+  display: flex;
+  align-self: flex-end;
+  margin: 2rem 1rem;
+}
+
+.back__button a {
+  font-size: 1.25rem;
+}
+
+.back__button:hover a {
+  text-decoration: underline;
+}

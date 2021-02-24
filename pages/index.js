@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import footer from '../styles/Footer.module.css'
 
 export default function Home() {
   return (
@@ -35,23 +36,20 @@ export default function Home() {
             <p>Not a very good opinion and knowledge share but you'll get the point.</p>
           </a>
 
-          <a href="https://read.cv/ilhambara" target="_blank" rel="noopener noreferrer" className={styles.card}>
+          <a href="/about" className={styles.card}>
             <h3>About &rarr;</h3>
             <p>A piece of standard information about myself in a well-organized structure.</p>
           </a>
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        {/* <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a> */}
-        <p>© 2021—present Ilham Bara.</p>
+      <footer className={footer.footer__flex}>
+        <div className={footer.footer__div}>
+            <p>Made using <span className={footer.text__span}><a href="https://nextjs.org/">Next.js</a></span>. Hosted on <span className={footer.text__span}><a href="https://vercel.com/">Vercel</a></span>.</p>
+        </div>
+        <div className={footer.footer__div}>
+            <p>© 2021—present Ilham Bara.</p>
+        </div>
       </footer>
     </div>
   )
