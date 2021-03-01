@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import footer from '../styles/Footer.module.css'
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import footer from '../styles/Footer.module.css';
 
 export default function Home() {
   return (
@@ -12,12 +12,14 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Howdy, I am <a href="https://read.cv/ilhambara" target="_blank" rel="noopener noreferrer">Bara!</a>
+          Howdy, I am{' '}
+          <a href="https://read.cv/ilhambara" target="_blank" rel="noopener noreferrer">
+            Bara!
+          </a>
         </h1>
 
         <p className={styles.description}>
-          I often introduce myself as a {' '}
-          <code className={styles.code}>web developer</code>
+          I often introduce myself as a <code className={styles.code}>web developer</code>
         </p>
 
         <div className={styles.grid}>
@@ -26,7 +28,7 @@ export default function Home() {
             <p>Let's take a quick visit at my side projects. Some already online, some haven't yet.</p>
           </a>
 
-          <a href="https://barathrum.me/#appearances" target="_blank" rel="noopener noreferrer" className={styles.card}>
+          <a href="/experiences" className={styles.card}>
             <h3>Experiences &rarr;</h3>
             <p>Selected events on my past appearances before pandemic outbreak.</p>
           </a>
@@ -45,12 +47,22 @@ export default function Home() {
 
       <footer className={footer.footer__flex}>
         <div className={footer.footer__div}>
-            <p>Made using <span className={footer.text__span}><a href="https://nextjs.org/">Next.js</a></span>. Hosted on <span className={footer.text__span}><a href="https://vercel.com/">Vercel</a></span>.</p>
+          <p>
+            Made using{' '}
+            <span className={footer.text__span}>
+              <a href="https://nextjs.org/">Next.js</a>
+            </span>
+            . Hosted on{' '}
+            <span className={footer.text__span}>
+              <a href="https://vercel.com/">Vercel</a>
+            </span>
+            .
+          </p>
         </div>
         <div className={footer.footer__div}>
-            <p>© 2021—present Ilham Bara.</p>
+          <p>© 2021—present Ilham Bara.</p>
         </div>
       </footer>
     </div>
-  )
+  );
 }

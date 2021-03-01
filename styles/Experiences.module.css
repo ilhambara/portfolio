@@ -1,0 +1,102 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 5rem 0 0 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 2rem;
+}
+
+.title h1 {
+  margin: 0;
+}
+
+.title,
+.description {
+  text-align: left;
+}
+
+/* Experiences Section */
+
+.background__experiences {
+  width: 800px;
+  max-width: 800px;
+  height: max-content;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  background-color: #12151d;
+}
+
+.experiences {
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 2rem;
+}
+
+.icon__experiences {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.detail__experiences {
+  line-height: 1.2rem;
+  padding-left: 1.8rem;
+}
+
+.detail__experiences h3 {
+  font-size: 1.8rem;
+}
+
+.detail__experiences p {
+  font-size: 1.2rem;
+}
+
+.hr__line {
+  max-width: 800px;
+  opacity: 0.6;
+  border: 1px solid azure;
+  margin: 0 2rem;
+}
+
+.text__span {
+  color: #1da1f2;
+  font-weight: 500;
+}
+
+.text__span:hover {
+  text-decoration: underline;
+}
+
+/* Back Button */
+
+.back__button {
+  display: flex;
+  align-self: flex-end;
+  margin: 2rem 1rem;
+}
+
+.back__button a {
+  font-size: 1.25rem;
+}
+
+.back__button:hover a {
+  text-decoration: underline;
+}
