@@ -30,12 +30,12 @@ export default function Home() {
 
           <a href="/experiences" className={styles.card}>
             <h3>Experiences &rarr;</h3>
-            <p>Selected events on my past appearances before pandemic outbreak.</p>
+            <p>Selected events of my past appearances from various opportunities.</p>
           </a>
 
           <a href="https://dev.to/g2ailhammubarok" target="_blank" rel="noopener noreferrer" className={styles.card}>
             <h3>Blog &rarr;</h3>
-            <p>Not a very good opinion and knowledge share but you'll get the point.</p>
+            <p>Not a very good opinion and knowledge share but you will get the point.</p>
           </a>
 
           <a href="/about" className={styles.card}>

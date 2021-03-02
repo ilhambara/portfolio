@@ -22,13 +22,15 @@
   font-size: 2rem;
 }
 
-.title h1 {
+.title h1,
+.title p {
   margin: 0;
+  line-height: 2;
+  text-align: center;
 }
 
-.title,
-.description {
-  text-align: left;
+.title p {
+  font-size: 1.25rem;
 }
 
 /* Experiences Section */
@@ -57,16 +59,20 @@
 }
 
 .detail__experiences {
-  line-height: 1.2rem;
+  line-height: 1.5;
   padding-left: 1.8rem;
 }
 
 .detail__experiences h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  color: #1da1f2;
 }
 
 .detail__experiences p {
-  font-size: 1.2rem;
+  max-width: 600px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #f9f9f9;
 }
 
 .hr__line {
@@ -74,6 +80,10 @@
   opacity: 0.6;
   border: 1px solid azure;
   margin: 0 2rem;
+}
+
+.text__tag {
+  opacity: 0.8;
 }
 
 .text__span {
