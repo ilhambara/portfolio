@@ -14,7 +14,7 @@ export default function About() {
       <main className={styles.main}>
         <div className={styles.profile}>
           <div className={styles.avatar}>
-            <Image src="/ava.jpg" alt="Picture of the author" width={200} height={200} className={styles.avatar} />
+            <Image src="/img/ava.jpg" alt="Picture of the author" width={200} height={200} className={styles.avatar} />
           </div>
           <div className={styles.info}>
             <h1 className={styles.title}>Ilham Bara</h1>

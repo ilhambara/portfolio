@@ -19,3 +19,19 @@
 .text__span:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+  .footer__flex {
+    flex-direction: column;
+  }
+
+  .footer__div {
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  .footer__div p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+  }
+}

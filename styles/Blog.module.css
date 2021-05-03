@@ -1,0 +1,15 @@
+/* Back Button */
+
+.back__button {
+  display: flex;
+  align-self: flex-end;
+  margin: 2rem 1rem;
+}
+
+.back__button a {
+  font-size: 1.25rem;
+}
+
+.back__button:hover a {
+  text-decoration: underline;
+}
