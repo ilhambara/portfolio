@@ -4,7 +4,6 @@ import { MdPeopleOutline } from 'react-icons/md';
 import { DiCodeBadge } from 'react-icons/di';
 import { BiMessage } from 'react-icons/bi';
 import styles from '../styles/Experiences.module.css';
-import footer from '../styles/Footer.module.css';
 
 export default function Experiences() {
   return (
@@ -96,25 +95,6 @@ export default function Experiences() {
           <a href="/">&larr; Home</a>
         </div>
       </main>
-
-      <footer className={footer.footer__flex}>
-        <div className={footer.footer__div}>
-          <p>
-            Made using{' '}
-            <span className={footer.text__span}>
-              <a href="https://nextjs.org/">Next.js</a>
-            </span>
-            . Hosted on{' '}
-            <span className={footer.text__span}>
-              <a href="https://vercel.com/">Vercel</a>
-            </span>
-            .
-          </p>
-        </div>
-        <div className={footer.footer__div}>
-          <p>© 2021—present Ilham Bara.</p>
-        </div>
-      </footer>
     </div>
   );
 }

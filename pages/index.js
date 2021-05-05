@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import footer from '../styles/Footer.module.css';
 
 export default function Home() {
   return (
@@ -25,7 +24,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.header__image}>
-            <Image src="/img/memoji-me.png" alt="Home memoji" width={200} height={200} />
+            <Image src="/img/memoji-me.png" width={240} height={240} alt="Home memoji" quality={90} />
           </div>
         </div>
 
@@ -51,29 +50,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-
-      <footer className={footer.footer__flex}>
-        <div className={footer.footer__div}>
-          <p>
-            Made using{' '}
-            <span className={footer.text__span}>
-              <a href="https://nextjs.org/">Next.js</a>
-            </span>{' '}
-            and API from{' '}
-            <span className={footer.text__span}>
-              <a href="https://docs.forem.com/api/">DEV</a>
-            </span>
-            . Hosted on{' '}
-            <span className={footer.text__span}>
-              <a href="https://vercel.com/">Vercel</a>
-            </span>
-            .
-          </p>
-        </div>
-        <div className={footer.footer__div}>
-          <p>© 2021—present Ilham Bara.</p>
-        </div>
-      </footer>
     </div>
   );
 }

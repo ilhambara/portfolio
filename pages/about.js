@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/About.module.css';
-import footer from '../styles/Footer.module.css';
 
 export default function About() {
   return (
@@ -97,25 +96,6 @@ export default function About() {
           <a href="/">&larr; Home</a>
         </div>
       </main>
-
-      <footer className={footer.footer__flex}>
-        <div className={footer.footer__div}>
-          <p>
-            Made using{' '}
-            <span className={footer.text__span}>
-              <a href="https://nextjs.org/">Next.js</a>
-            </span>
-            . Hosted on{' '}
-            <span className={footer.text__span}>
-              <a href="https://vercel.com/">Vercel</a>
-            </span>
-            .
-          </p>
-        </div>
-        <div className={footer.footer__div}>
-          <p>© 2021—present Ilham Bara.</p>
-        </div>
-      </footer>
     </div>
   );
 }
