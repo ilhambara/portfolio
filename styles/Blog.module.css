@@ -55,6 +55,12 @@
   color: #e0e0df;
 }
 
+/* id posts */
+.posts {
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
 /* Back Button */
 
 .back__button {
