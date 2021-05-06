@@ -1,9 +1,66 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__title {
+  font-size: 1.25rem;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 2rem;
+}
+
+.post__url {
+  padding: 2px 16px;
+  margin: 1rem 0;
+  background: #12151d;
+  display: block;
+  border-left: 8px solid #12151d;
+  cursor: pointer;
+}
+
+.post__url:hover {
+  border-left: 8px solid #1da1f2;
+}
+
+.post__url a {
+  color: #1da1f2;
+  text-align: right;
+}
+
+.post__url a:hover {
+  text-decoration: underline;
+}
+
+.text__dimmed {
+  color: #e0e0df;
+}
+
 /* Back Button */
 
 .back__button {
   display: flex;
   align-self: flex-end;
-  margin: 2rem 1rem;
+  margin: 1rem;
 }
 
 .back__button a {
@@ -12,4 +69,10 @@
 
 .back__button:hover a {
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 2.5rem 0;
+  }
 }
