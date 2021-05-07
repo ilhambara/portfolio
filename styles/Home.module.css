@@ -114,7 +114,7 @@
   }
 
   .header__title {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
   }
 
   .header__image {
@@ -149,6 +149,10 @@
     width: 100%;
     flex-direction: column;
     margin: 0;
+  }
+
+  .card {
+    margin: 0.5rem 1rem;
   }
 
   .card h3 {

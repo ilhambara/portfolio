@@ -17,7 +17,6 @@ export default function Experiences() {
       <main className={components.main}>
         <div className={styles.title}>
           <h1>Experiences</h1>
-          <p>Class, Bootcamp, Meetup, and other events from my past appearances</p>
         </div>
         <div className={styles.background__experiences}>
           <div className={styles.experiences}>
