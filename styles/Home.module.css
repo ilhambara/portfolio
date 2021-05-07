@@ -12,15 +12,15 @@
 }
 
 .header__image {
-  cursor: pointer;
+  /* cursor: pointer; */
   border-radius: 50%;
 }
 
-.header__image:hover {
+/* .header__image:hover {
   border-radius: 50%;
   background-color: #192734;
   transition: 0.3s ease-in-out;
-}
+} */
 
 .title a {
   color: #1da1f2;

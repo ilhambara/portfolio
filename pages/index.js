@@ -33,7 +33,8 @@ export default function Home() {
               top: 0,
               bottom: 0,
             }}
-            dragElastic={0.1}
+            dragElastic={0.15}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
             className={styles.header__image}
           >
             <Image src="/img/memoji-me.png" width={240} height={240} alt="Home memoji" quality={90} />
