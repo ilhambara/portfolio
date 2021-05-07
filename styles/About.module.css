@@ -62,6 +62,11 @@
   margin: 2rem;
 }
 
+.text__title__ul {
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+}
+
 .grid__display {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -112,6 +117,7 @@
 
   .text__title {
     margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
 
   .background__about {
@@ -123,7 +129,8 @@
   }
 
   .grid__elements {
-    margin-top: 1rem;
+    margin-top: 1.75rem;
+    letter-spacing: normal;
   }
 
   .list__ul {

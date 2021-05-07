@@ -77,6 +77,10 @@
 /* media query */
 
 @media (max-width: 600px) {
+  .main {
+    padding: 3rem 0;
+  }
+
   .footer__flex {
     flex-direction: column;
   }

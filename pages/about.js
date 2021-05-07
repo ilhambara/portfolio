@@ -31,7 +31,7 @@ export default function About() {
             <h3 className={styles.text__title}>Tech Stacks</h3>
             <div className={styles.grid__display}>
               <div className={styles.grid__elements}>
-                <h5 className={styles.text__desc}>Languages</h5>
+                <h5 className={styles.text__title__ul}>Languages</h5>
                 <ul className={styles.list__ul}>
                   <li>HTML</li>
                   <li>CSS</li>
@@ -41,7 +41,7 @@ export default function About() {
                 </ul>
               </div>
               <div className={styles.grid__elements}>
-                <h5 className={styles.text__desc}>Frameworks</h5>
+                <h5 className={styles.text__title__ul}>Frameworks</h5>
                 <ul className={styles.list__ul}>
                   <li>Next.js</li>
                   <li>Gatsby.js</li>
@@ -51,7 +51,7 @@ export default function About() {
                 </ul>
               </div>
               <div className={styles.grid__elements}>
-                <h5 className={styles.text__desc}>Infrastructures</h5>
+                <h5 className={styles.text__title__ul}>Infrastructures</h5>
                 <ul className={styles.list__ul}>
                   <li>NPM (Node.js)</li>
                   <li>Vercel</li>
@@ -61,7 +61,7 @@ export default function About() {
                 </ul>
               </div>
               <div className={styles.grid__elements}>
-                <h5 className={styles.text__desc}>Other Tools</h5>
+                <h5 className={styles.text__title__ul}>Other Tools</h5>
                 <ul className={styles.list__ul}>
                   <li>Contentful</li>
                   <li>Wordpress</li>
