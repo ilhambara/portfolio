@@ -1,21 +1,3 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.main {
-  padding: 5rem 0 0 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .title {
   margin: 0;
   line-height: 1.15;
@@ -92,21 +74,5 @@
 }
 
 .text__span:hover {
-  text-decoration: underline;
-}
-
-/* Back Button */
-
-.back__button {
-  display: flex;
-  align-self: flex-end;
-  margin: 2rem 1rem;
-}
-
-.back__button a {
-  font-size: 1.25rem;
-}
-
-.back__button:hover a {
   text-decoration: underline;
 }

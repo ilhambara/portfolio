@@ -1,16 +1,17 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import components from '../styles/Components.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={components.container}>
       <Head>
         <title>Ilham Bara | Next Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={components.main}>
         <div className={styles.header}>
           <div className={styles.header__title}>
             <h1 className={styles.title}>

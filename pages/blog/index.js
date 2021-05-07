@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../styles/Blog.module.css';
+import components from '../../styles/Components.module.css';
 
 const defaultEndpoint = 'https://dev.to/api/articles?username=ilhambara';
 
@@ -15,13 +16,13 @@ export const getStaticProps = async () => {
 
 export default function Blog({ posts }) {
   return (
-    <div className={styles.container}>
+    <div className={components.container}>
       <Head>
         <title>Blog | Next Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={components.main}>
         <div className={styles.page__title}>
           <h1>Blog</h1>
         </div>
@@ -43,7 +44,7 @@ export default function Blog({ posts }) {
             );
           })}
         </div>
-        <div className={styles.back__button}>
+        <div className={components.back__button}>
           <a href="/">&larr; Home</a>
         </div>
       </main>

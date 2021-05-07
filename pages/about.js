@@ -1,19 +1,20 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/About.module.css';
+import components from '../styles/Components.module.css';
 
 export default function About() {
   return (
-    <div className={styles.container}>
+    <div className={components.container}>
       <Head>
         <title>About | Next Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={components.main}>
         <div className={styles.profile}>
           <div className={styles.avatar}>
-            <Image src="/img/ava.jpg" alt="Picture of the author" width={200} height={200} className={styles.avatar} />
+            <Image src="/img/ava.jpg" alt="picture of me" width={200} height={200} className={styles.avatar} />
           </div>
           <div className={styles.info}>
             <h1 className={styles.title}>Ilham Bara</h1>
@@ -42,21 +43,29 @@ export default function About() {
               <div className={styles.grid__elements}>
                 <h5 className={styles.text__desc}>Frameworks</h5>
                 <ul className={styles.list__ul}>
-                  <li>React JS</li>
-                  <li>Tailwind CSS</li>
                   <li>Next.js</li>
-                  <li>CodeIgniter</li>
+                  <li>Gatsby.js</li>
+                  <li>Tailwind CSS</li>
                   <li>Bootstrap</li>
+                  <li>CodeIgniter</li>
                 </ul>
               </div>
               <div className={styles.grid__elements}>
-                <h5 className={styles.text__desc}>Tools & Infrastructures</h5>
+                <h5 className={styles.text__desc}>Infrastructures</h5>
                 <ul className={styles.list__ul}>
                   <li>NPM (Node.js)</li>
-                  <li>Git</li>
-                  <li>Contentful</li>
                   <li>Vercel</li>
                   <li>Netlify</li>
+                  <li>cPanel</li>
+                  <li>GitHub Pages</li>
+                </ul>
+              </div>
+              <div className={styles.grid__elements}>
+                <h5 className={styles.text__desc}>Other Tools</h5>
+                <ul className={styles.list__ul}>
+                  <li>Contentful</li>
+                  <li>Wordpress</li>
+                  <li>Figma</li>
                   <li>Visual Studio Code</li>
                 </ul>
               </div>
@@ -65,7 +74,7 @@ export default function About() {
           <div className={styles.socials}>
             <h3 className={styles.text__title}>Socials</h3>
             <ul className={styles.list__ul}>
-              <li>
+              <li className={styles.list__socials}>
                 GitHub –{' '}
                 <span className={styles.text__span}>
                   <a href="https://github.com/ilhambara" target="_blank">
@@ -73,7 +82,15 @@ export default function About() {
                   </a>
                 </span>
               </li>
-              <li>
+              <li className={styles.list__socials}>
+                LinkedIn –{' '}
+                <span className={styles.text__span}>
+                  <a href="https://www.linkedin.com/in/ilhambara/" target="_blank">
+                    linkedin.com/in/ilhambara
+                  </a>
+                </span>
+              </li>
+              <li className={styles.list__socials}>
                 Dev.to –{' '}
                 <span className={styles.text__span}>
                   <a href="https://dev.to/ilhambara" target="_blank">
@@ -81,7 +98,7 @@ export default function About() {
                   </a>
                 </span>
               </li>
-              <li>
+              <li className={styles.list__socials}>
                 Twitter –{' '}
                 <span className={styles.text__span}>
                   <a href="https://twitter.com/zgve679jdv" target="_blank">
@@ -92,7 +109,7 @@ export default function About() {
             </ul>
           </div>
         </div>
-        <div className={styles.back__button}>
+        <div className={components.back__button}>
           <a href="/">&larr; Home</a>
         </div>
       </main>

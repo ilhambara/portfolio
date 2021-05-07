@@ -4,16 +4,17 @@ import { MdPeopleOutline } from 'react-icons/md';
 import { DiCodeBadge } from 'react-icons/di';
 import { BiMessage } from 'react-icons/bi';
 import styles from '../styles/Experiences.module.css';
+import components from '../styles/Components.module.css';
 
 export default function Experiences() {
   return (
-    <div className={styles.container}>
+    <div className={components.container}>
       <Head>
         <title>Experiences | Next Portfolio</title>
         <link rel="icon" href="https://raw.githubusercontent.com/ilhambara/nextjs-portfolio/main/public/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={components.main}>
         <div className={styles.title}>
           <h1>Experiences</h1>
           <p>Class, Bootcamp, Meetup, and other events from my past appearances</p>
@@ -91,7 +92,7 @@ export default function Experiences() {
             </div>
           </div>
         </div>
-        <div className={styles.back__button}>
+        <div className={components.back__button}>
           <a href="/">&larr; Home</a>
         </div>
       </main>

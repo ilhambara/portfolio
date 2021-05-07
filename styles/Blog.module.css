@@ -1,21 +1,3 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .page__title {
   font-size: 1.25rem;
 }
@@ -59,22 +41,6 @@
 .posts {
   max-width: 800px;
   padding: 0 2rem;
-}
-
-/* Back Button */
-
-.back__button {
-  display: flex;
-  align-self: flex-end;
-  margin: 1rem;
-}
-
-.back__button a {
-  font-size: 1.25rem;
-}
-
-.back__button:hover a {
-  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
