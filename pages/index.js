@@ -10,6 +10,13 @@ export default function Home() {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
+        <meta
+          property="description"
+          content={
+            "Hi, I'm passionately curious about anything related to web development. I usually contribute to open source projects, exploring some useful resources, and taking any courses to rank up my skills. Also working on paid projects if there's opportunity."
+          }
+          key="ogdesc"
+        />
         <meta property="og:url" content={'https://ilhambara.vercel.app/'} key="ogurl" />
         <meta property="og:image" content={'https://res.cloudinary.com/drixfgugx/image/upload/v1620498970/web-v3/og-image_zzoxrr.png'} key="ogimage" />
         <meta property="og:image:type" content="website" />
@@ -17,13 +24,7 @@ export default function Home() {
         <meta property="og:image:height" content="1080" />
         <meta property="og:site_name" content={'Ilham Bara | Next Portfolio'} key="ogsitename" />
         <meta property="og:title" content={'Portfolio Website'} key="ogtitle" />
-        <meta
-          property="og:description"
-          content={
-            "Hi, I'm passionately curious about anything related to web development. I usually contribute to open source projects, exploring some useful resources, and taking any courses to rank up my skills. Also working on paid projects if there's opportunity."
-          }
-          key="ogdesc"
-        />
+        <meta property="og:description" content={'Ilham Bara is a passionate and curious web developer. Doing anything related to web dev things.'} key="ogdesc" />
         <meta name="twitter:title" content={'Ilham Bara | Next Portfolio'} />
         <meta name="twitter:description" content={'Ilham Bara is a passionate and curious web developer. Doing anything related to web dev things.'} />
         <meta name="twitter:image" content={'https://res.cloudinary.com/drixfgugx/image/upload/v1620498970/web-v3/og-image_zzoxrr.png'} />
