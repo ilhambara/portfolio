@@ -2,7 +2,7 @@
 
 Getting started to Next.js for my portfolio.
 
-![Og image](https://res.cloudinary.com/drixfgugx/image/upload/v1620488401/assets/og-image_oib8ij.png)
+![Og image](https://res.cloudinary.com/drixfgugx/image/upload/v1620498970/web-v3/og-image_zzoxrr.png)
 
 ---
 

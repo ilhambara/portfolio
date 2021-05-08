@@ -8,6 +8,22 @@ export default function Home() {
   return (
     <div className={components.container}>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <meta property="og:url" content={'https://ilhambara.vercel.app/'} key="ogurl" />
+        <meta property="og:image" content={'https://res.cloudinary.com/drixfgugx/image/upload/v1620498970/web-v3/og-image_zzoxrr.png'} key="ogimage" />
+        <meta property="og:site_name" content={'Ilham Bara | Next Portfolio'} key="ogsitename" />
+        <meta property="og:title" content={'Portfolio Website'} key="ogtitle" />
+        <meta
+          property="og:description"
+          content={
+            "Hi, I'm passionately curious about anything related to web development. I usually contribute to open source projects, exploring some useful resources, and taking any courses to rank up my skills. Also working on paid projects if there's opportunity."
+          }
+          key="ogdesc"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content={'@zgve679jdv'} />
+        <meta name="twitter:creator" content={'@zgve679jdv'} />
         <title>Ilham Bara | Next Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
