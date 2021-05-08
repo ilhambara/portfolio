@@ -1,22 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# nextjs-portfolio
 
-## Getting Started
+Getting started to Next.js for my portfolio.
 
-First, run the development server:
+![Og image](https://res.cloudinary.com/drixfgugx/image/upload/v1620488401/assets/og-image_oib8ij.png)
+
+---
+
+## Run Locally
+
+Install dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
+  npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Start the development server
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+  npm run dev
+```
 
-## Learn More
+Open http://localhost:3000 with your browser to see the result.
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Dark mode only
+- Responsive design
+- No more convoluted menus
+- Animated memoji
+
+## Tech Stack
+
+**Client:** Next js, Forem DEV, Framer-motion, and Vercel
+
+**Server:** Node (NPM)
