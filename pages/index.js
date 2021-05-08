@@ -10,13 +10,7 @@ export default function Home() {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <meta
-          property="description"
-          content={
-            "Hi, I'm passionately curious about anything related to web development. I usually contribute to open source projects, exploring some useful resources, and taking any courses to rank up my skills. Also working on paid projects if there's opportunity."
-          }
-          key="ogdesc"
-        />
+        <meta property="description" content={'Ilham Bara is a passionate and curious web developer. Doing anything related to web dev things.'} />
         <meta property="og:url" content={'https://ilhambara.vercel.app/'} key="ogurl" />
         <meta property="og:image" content={'https://res.cloudinary.com/drixfgugx/image/upload/v1620498970/web-v3/og-image_zzoxrr.png'} key="ogimage" />
         <meta property="og:image:type" content="website" />
