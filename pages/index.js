@@ -12,7 +12,7 @@ export default function Home() {
         <meta charSet="utf-8" />
         <meta property="description" content={'Ilham Bara is a passionate and curious web developer. Doing anything related to web dev things.'} />
         <meta property="og:url" content={'https://ilhambara.vercel.app/'} key="ogurl" />
-        <meta property="og:image" content={'https://res.cloudinary.com/drixfgugx/image/upload/v1620498970/web-v3/og-image_zzoxrr.png'} key="ogimage" />
+        <meta property="og:image" content={'/img/og-image.png'} key="ogimage" />
         <meta property="og:image:type" content="website" />
         <meta property="og:image:width" content="1920" />
         <meta property="og:image:height" content="1080" />
@@ -21,7 +21,7 @@ export default function Home() {
         <meta property="og:description" content={'Ilham Bara is a passionate and curious web developer. Doing anything related to web dev things.'} key="ogdesc" />
         <meta name="twitter:title" content={'Ilham Bara | Next Portfolio'} />
         <meta name="twitter:description" content={'Ilham Bara is a passionate and curious web developer. Doing anything related to web dev things.'} />
-        <meta name="twitter:image" content={'https://res.cloudinary.com/drixfgugx/image/upload/v1620498970/web-v3/og-image_zzoxrr.png'} />
+        <meta name="twitter:image" content={'/img/og-image.png'} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content={'@zgve679jdv'} />
         <meta name="twitter:creator" content={'@zgve679jdv'} />
