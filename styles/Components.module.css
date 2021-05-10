@@ -65,6 +65,10 @@
   margin: 0 3rem;
 }
 
+.footer__div__copyright {
+  margin: 0 3rem;
+}
+
 .text__span {
   color: #1da1f2;
   font-weight: 500;
@@ -87,6 +91,7 @@
 
   .footer__div {
     margin: 0 2rem;
+    padding-top: 1rem;
   }
 
   .footer__div p {

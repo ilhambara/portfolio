@@ -21,7 +21,7 @@ export const Footer = () => {
             .
           </p>
         </div>
-        <div className={footer.footer__div}>
+        <div className={footer.footer__div__copyright}>
           <p>© 2021—present Ilham Bara.</p>
         </div>
       </footer>
