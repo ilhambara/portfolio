@@ -62,7 +62,7 @@ export default function Home() {
         <div className={styles.grid}>
           <a href="https://github.com/ilhambara?tab=repositories" target="_blank" rel="noopener noreferrer" className={styles.card}>
             <h3>Projects &rarr;</h3>
-            <p>Take a quick visit to my side projects. Some already online, some haven't yet.</p>
+            <p>Take a glance at my side projects. Some already online, the others are still in development.</p>
           </a>
 
           <a href="/experiences" className={styles.card}>
@@ -72,12 +72,12 @@ export default function Home() {
 
           <a href="/blog" className={styles.card}>
             <h3>Blog &rarr;</h3>
-            <p>Not a very good opinions and knowledges sharing but you will get the point.</p>
+            <p>Not a very good opinions and knowledges share but you will get the point.</p>
           </a>
 
           <a href="/about" className={styles.card}>
             <h3>About &rarr;</h3>
-            <p>A further piece of information about myself in a well organized structure.</p>
+            <p>A further piece of information about myself in a well-organized structure.</p>
           </a>
         </div>
       </main>
