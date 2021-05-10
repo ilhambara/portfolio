@@ -12,14 +12,8 @@ export default function About() {
       </Head>
 
       <main className={components.main}>
-        <div className={styles.profile}>
-          <div className={styles.avatar}>
-            <Image src="/img/ava.jpg" alt="picture of me" width={200} height={200} className={styles.avatar} />
-          </div>
-          <div className={styles.info}>
-            <h1 className={styles.title}>Ilham Bara</h1>
-            <p className={styles.description}>Web Developer</p>
-          </div>
+        <div className={styles.page__title}>
+          <h1>About</h1>
         </div>
         <div className={styles.background__about}>
           <div className={styles.about}>
