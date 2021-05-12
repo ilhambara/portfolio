@@ -1,3 +1,5 @@
+import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../../styles/Blog.module.css';
 import components from '../../styles/Components.module.css';
 
@@ -30,10 +32,18 @@ export const getStaticProps = async (context) => {
 const Posts = ({ post }) => {
   return (
     <div className={components.container}>
+      <Head>
+        <title>{post.title} | Next Portfolio</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <main className={components.main}>
         <div className={styles.posts}>
           <h3>{post.title}</h3>
-          <p>{post.body_html}</p>
+          <div className={styles.posts__body} dangerouslySetInnerHTML={{ __html: post.body_html }} />
+        </div>
+        <div className={components.back__button}>
+          <a href="/blog">&larr; Blog</a>
         </div>
       </main>
     </div>

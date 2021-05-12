@@ -39,8 +39,28 @@
 
 /* id posts */
 .posts {
-  max-width: 800px;
-  padding: 0 2rem;
+  max-width: 840px;
+}
+
+.posts h3 {
+  font-size: 2.5rem;
+  padding: 0 3rem;
+}
+
+.posts__body {
+  font-size: 1.25rem;
+  padding: 1.5rem 3rem;
+  line-height: 1.5;
+  border-radius: 10px;
+  background-color: #12151d;
+}
+
+.posts__body a {
+  color: #1da1f2;
+}
+
+.posts__body a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {

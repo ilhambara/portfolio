@@ -32,12 +32,11 @@ export default function Blog({ posts }) {
               <div className={styles.post__url}>
                 <h3>{post.title}</h3>
                 <p className={styles.text__dimmed}>
-                  {post.readable_publish_date} -- {post.tags}
+                  {post.readable_publish_date} — {post.tags}
                 </p>
-                <p>{post.description}</p>
-                <Link href={post.canonical_url} key={post.id}>
-                  <a target="_blank">
-                    <p>read on Dev.to</p>
+                <Link href={'/blog/' + post.id} key={post.id}>
+                  <a>
+                    <p>read full article</p>
                   </a>
                 </Link>
               </div>
