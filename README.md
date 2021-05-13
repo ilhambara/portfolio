@@ -2,7 +2,7 @@
 
 Getting started to Next.js for my portfolio.
 
-![Og image](https://res.cloudinary.com/drixfgugx/image/upload/v1620498970/web-v3/og-image_zzoxrr.png)
+![og image](public/img/og-image.png)
 
 ---
 
@@ -31,6 +31,6 @@ Open http://localhost:3000 with your browser to see the result.
 
 ## Tech Stack
 
-**Client:** Next js, Forem DEV, Framer-motion, and Vercel
+**Client:** Next js, Forem DEV, and Framer-motion
 
-**Server:** Node (NPM)
+**Server:** Node (NPM) and Vercel
