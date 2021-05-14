@@ -36,7 +36,7 @@ export default function Blog({ posts }) {
                 </p>
                 <Link href={'/blog/' + post.id} key={post.id}>
                   <a>
-                    <p>read full article</p>
+                    <p className={styles.post__read}>read full article</p>
                   </a>
                 </Link>
               </div>

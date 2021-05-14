@@ -87,6 +87,7 @@
   .posts h3 {
     font-size: 2rem;
     padding: 0 1.75rem;
+    line-height: 1.5;
   }
 
   .posts__body {
@@ -95,5 +96,13 @@
 
   .post__url {
     margin: 1rem 0;
+  }
+
+  .post__url h3 {
+    font-size: 1.25rem;
+  }
+
+  .post__read {
+    margin-top: 1.5rem;
   }
 }
