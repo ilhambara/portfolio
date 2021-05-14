@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
 .page__title {
   font-size: 1.25rem;
 }
@@ -13,7 +15,8 @@
 
 .post__url {
   padding: 2px 16px;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  line-height: 1.5;
   background: #12151d;
   display: block;
   border-left: 8px solid #12151d;
@@ -34,7 +37,8 @@
 }
 
 .text__dimmed {
-  color: #e0e0df;
+  font-family: 'Nunito', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e7e7e7;
 }
 
 /* id posts */
@@ -55,16 +59,41 @@
   background-color: #12151d;
 }
 
+/* per style elements */
+
 .posts__body a {
   color: #1da1f2;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .posts__body a:hover {
   text-decoration: underline;
 }
 
+.posts__body blockquote {
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 8px solid #1da1f2;
+
+  font-style: italic;
+}
+
 @media (max-width: 600px) {
   .main {
     padding: 2.5rem 0;
+  }
+
+  .posts h3 {
+    font-size: 2rem;
+    padding: 0 1.75rem;
+  }
+
+  .posts__body {
+    padding: 0.5rem 1.75rem;
+  }
+
+  .post__url {
+    margin: 1rem 0;
   }
 }

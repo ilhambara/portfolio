@@ -43,7 +43,7 @@ export default function Blog({ posts }) {
             );
           })}
         </div>
-        <div className={components.back__button}>
+        <div className={components.back__button__blog}>
           <a href="/">&larr; Home</a>
         </div>
       </main>

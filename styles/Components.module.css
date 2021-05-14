@@ -34,6 +34,22 @@
   text-decoration: underline;
 }
 
+/* back button for blog */
+
+.back__button__blog {
+  display: flex;
+  align-self: flex-end;
+  margin: 0.5rem 1rem;
+}
+
+.back__button__blog a {
+  font-size: 1.25rem;
+}
+
+.back__button__blog:hover a {
+  text-decoration: underline;
+}
+
 /* footer */
 
 .footer {
