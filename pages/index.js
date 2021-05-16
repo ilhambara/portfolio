@@ -60,7 +60,7 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
-          <a href="https://github.com/ilhambara?tab=repositories" target="_blank" rel="noopener noreferrer" className={styles.card}>
+          <a href="/projects" className={styles.card}>
             <h3>Projects &rarr;</h3>
             <p>Take a glance at my side projects. Some already online, the others are still in development.</p>
           </a>
