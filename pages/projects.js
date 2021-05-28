@@ -11,10 +11,10 @@ const projects = () => {
       </Head>
 
       <main className={components.main}>
-        <h2 className={styles.title}>🔧 The `projects section` are still under development 🔨</h2>
-        <Link href="https://github.com/ilhambara?tab=repositories">
+        <h2 className={styles.title}>You're going to visit the `project-section` in a different domain</h2>
+        <Link href="https://project-bara.vercel.app/">
           <a>
-            <p className={styles.link}>Go to GitHub &rarr;</p>
+            <p className={styles.link}>Proceed Anyway &rarr;</p>
           </a>
         </Link>
         <div className={components.back__button}>
