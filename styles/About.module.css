@@ -64,12 +64,8 @@
 
 .grid__display {
   display: grid;
+  grid-gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
-}
-
-.grid__elements {
-  overflow-wrap: break-word;
-  letter-spacing: 0.25px;
 }
 
 .list__ul {
@@ -121,11 +117,7 @@
 
   .grid__display {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid__elements {
-    margin-top: 1.75rem;
-    letter-spacing: normal;
+    grid-gap: 2rem;
   }
 
   .list__ul {

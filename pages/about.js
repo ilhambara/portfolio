@@ -22,9 +22,8 @@ export default function About() {
             <p className={styles.text__desc}>I usually contribute to open source projects, exploring some useful resources, and taking any courses to rank up my skills. Also working on paid projects if there's opportunity.</p>
           </div>
           <div className={styles.techstacks}>
-            <h3 className={styles.text__title}>Tech Stacks</h3>
             <div className={styles.grid__display}>
-              <div className={styles.grid__elements}>
+              <div>
                 <h5 className={styles.text__title__ul}>Languages</h5>
                 <ul className={styles.list__ul}>
                   <li>HTML</li>
@@ -34,32 +33,33 @@ export default function About() {
                   <li>TypeScript</li>
                 </ul>
               </div>
-              <div className={styles.grid__elements}>
+              <div>
                 <h5 className={styles.text__title__ul}>Frameworks</h5>
                 <ul className={styles.list__ul}>
                   <li>Next.js</li>
-                  <li>Gatsby.js</li>
+                  <li>React.js</li>
                   <li>Tailwind CSS</li>
                   <li>Bootstrap</li>
                   <li>CodeIgniter</li>
                 </ul>
               </div>
-              <div className={styles.grid__elements}>
+              <div>
                 <h5 className={styles.text__title__ul}>Infrastructures</h5>
                 <ul className={styles.list__ul}>
                   <li>NPM (Node.js)</li>
                   <li>Vercel</li>
                   <li>Netlify</li>
-                  <li>cPanel</li>
                   <li>GitHub Pages</li>
+                  <li>Surge.sh</li>
                 </ul>
               </div>
-              <div className={styles.grid__elements}>
+              <div>
                 <h5 className={styles.text__title__ul}>Other Tools</h5>
                 <ul className={styles.list__ul}>
                   <li>Contentful</li>
                   <li>Wordpress</li>
                   <li>Figma</li>
+                  <li>Framer Motion</li>
                   <li>Visual Studio Code</li>
                 </ul>
               </div>

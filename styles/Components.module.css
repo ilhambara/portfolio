@@ -106,12 +106,17 @@
   }
 
   .footer__div {
-    margin: 0 2rem;
-    padding-top: 1rem;
+    margin: 1rem 2rem;
   }
 
-  .footer__div p {
+  .footer__div__copyright {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer__div p,
+  .footer__div__copyright p {
     margin: 0;
+    font-size: 0.85rem;
     line-height: 1.5;
     text-align: center;
   }
