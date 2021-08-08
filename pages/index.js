@@ -3,6 +3,13 @@ import styles from "../styles/Home.module.css";
 import components from "../styles/Components.module.css";
 import { motion } from "framer-motion";
 import { OpenGraph } from "../components/OpenGraph";
+import { HomeCard } from "../components/HomeCard";
+import {
+	homeDataOne,
+	homeDataTwo,
+	homeDataThree,
+	homeDataFour,
+} from "../data/Home";
 
 export default function Home() {
 	return (
@@ -53,36 +60,10 @@ export default function Home() {
 				</div>
 
 				<div className={styles.grid}>
-					<a href="/projects" className={styles.card}>
-						<h3>Projects &rarr;</h3>
-						<p>
-							Take a glance at my side projects. Some already online, the others
-							are still in development.
-						</p>
-					</a>
-
-					<a href="/experiences" className={styles.card}>
-						<h3>Experiences &rarr;</h3>
-						<p>
-							Selected events on my past appearances from various occasions.
-						</p>
-					</a>
-
-					<a href="/blog" className={styles.card}>
-						<h3>Blog &rarr;</h3>
-						<p>
-							Not a very good opinions and knowledges share but you will get the
-							point.
-						</p>
-					</a>
-
-					<a href="/about" className={styles.card}>
-						<h3>About &rarr;</h3>
-						<p>
-							A further piece of information about myself in a well-organized
-							structure.
-						</p>
-					</a>
+					<HomeCard {...homeDataOne} />
+					<HomeCard {...homeDataTwo} />
+					<HomeCard {...homeDataThree} />
+					<HomeCard {...homeDataFour} />
 				</div>
 			</main>
 		</div>
