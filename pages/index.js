@@ -4,12 +4,6 @@ import components from "../styles/Components.module.css";
 import { motion } from "framer-motion";
 import { OpenGraph } from "../components/OpenGraph";
 import { HomeCard } from "../components/HomeCard";
-import {
-	homeDataOne,
-	homeDataTwo,
-	homeDataThree,
-	homeDataFour,
-} from "../data/Home";
 
 export default function Home() {
 	return (
@@ -60,10 +54,7 @@ export default function Home() {
 				</div>
 
 				<div className={styles.grid}>
-					<HomeCard {...homeDataOne} />
-					<HomeCard {...homeDataTwo} />
-					<HomeCard {...homeDataThree} />
-					<HomeCard {...homeDataFour} />
+					<HomeCard />
 				</div>
 			</main>
 		</div>

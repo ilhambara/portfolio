@@ -1,15 +1,22 @@
+import data from "../data/home.json";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
-export const HomeCard = ({ title, description, url }) => {
+export const HomeCard = () => {
 	return (
 		<>
-			<Link href={url}>
-				<a className={styles.card}>
-					<h3>{title} &rarr;</h3>
-					<p>{description}</p>
-				</a>
-			</Link>
+			{data.map((home) => {
+				return (
+					<>
+						<Link href={home.url} key={home.id}>
+							<a className={styles.card}>
+								<h3>{home.title} &rarr;</h3>
+								<p>{home.description}</p>
+							</a>
+						</Link>
+					</>
+				);
+			})}
 		</>
 	);
 };

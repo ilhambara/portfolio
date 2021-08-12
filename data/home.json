@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"title": "Projects",
+		"description": "sides, groups, and products",
+		"url": "/projects"
+	},
+	{
+		"id": 2,
+		"title": "Experiencess",
+		"description": "appearances and events",
+		"url": "/experiences"
+	},
+	{
+		"id": 3,
+		"title": "Blog",
+		"description": "stories and knowledge sharing",
+		"url": "/blog"
+	},
+	{
+		"id": 4,
+		"title": "About",
+		"description": "my personal information",
+		"url": "/about"
+	}
+]

@@ -1,102 +1,105 @@
 .title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 1.25rem;
+	margin: 0;
+	line-height: 1.15;
+	font-size: 1.25rem;
 }
 
 .title h1,
 .title p {
-  margin: 0;
-  line-height: 2;
-  text-align: center;
+	margin: 0;
+	line-height: 2;
+	text-align: center;
 }
 
 .title p {
-  font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 
 /* Experiences Section */
 
 .background__experiences {
-  margin-top: 1.5rem;
-  border-radius: 10px;
-  background-color: #12151d;
+	margin-top: 1.5rem;
+	border-radius: 10px;
+	background-color: #12151d;
 }
 
 .experiences {
-  display: flex;
-  text-align: left;
-  margin: 2rem;
+	display: flex;
+	text-align: left;
+	margin: 2rem;
 }
 
 .icon__experiences {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
 }
 
 .detail__experiences {
-  line-height: 1.5;
-  padding-left: 1.8rem;
+	line-height: 1.5;
+	padding-left: 1.5rem;
 }
 
 .detail__experiences h3 {
-  font-size: 1.6rem;
-  color: #1da1f2;
+	font-size: 1.6rem;
+	color: #1da1f2;
 }
 
 .detail__experiences p {
-  max-width: 600px;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  color: #f9f9f9;
+	max-width: 600px;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	color: #f9f9f9;
 }
 
 .hr__line {
-  max-width: 800px;
-  opacity: 0.6;
-  border: 1px solid azure;
-  margin: 0 2rem;
+	max-width: 800px;
+	opacity: 0.6;
+	border: 1px solid azure;
+}
+
+.hr__line:last-child {
+	display: none;
 }
 
 .text__tag {
-  opacity: 0.8;
+	opacity: 0.8;
 }
 
 .text__span {
-  color: #1da1f2;
-  font-weight: 500;
+	color: #1da1f2;
+	font-weight: 500;
 }
 
 .text__span:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 @media (max-width: 600px) {
-  .title {
-    font-size: 1.25rem;
-  }
+	.title {
+		font-size: 1.25rem;
+	}
 
-  .experiences {
-    margin: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+	.experiences {
+		margin: 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
-  .detail__experiences {
-    padding: 0;
-    text-align: center;
-  }
+	.detail__experiences {
+		padding: 0;
+		text-align: center;
+	}
 
-  .detail__experiences h3 {
-    font-size: 1.4rem;
-  }
+	.detail__experiences h3 {
+		font-size: 1.4rem;
+	}
 
-  .detail__experiences p {
-    font-size: 1.125rem;
-  }
+	.detail__experiences p {
+		font-size: 1.125rem;
+	}
 
-  .text__tag {
-    font-size: 1rem !important;
-  }
+	.text__tag {
+		font-size: 1rem !important;
+	}
 }
