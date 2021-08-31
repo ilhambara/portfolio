@@ -1,7 +1,6 @@
 import { Flex, Box, Link, Heading, Text, VStack } from "@chakra-ui/react";
 import Head from "next/head";
-import styles from "../../styles/Blog.module.css";
-import components from "../../styles/Components.module.css";
+import Blogs from "../../styles/Blog.module.css";
 
 export const getStaticPaths = async () => {
 	const res = await fetch("https://dev.to/api/articles?username=ilhambara");
@@ -57,7 +56,7 @@ const Posts = ({ post }) => {
 				</Flex>
 
 				<Box
-					className={styles.posts__body}
+					className={Blogs.posts__body}
 					dangerouslySetInnerHTML={{ __html: post.body_html }}
 				/>
 			</VStack>
