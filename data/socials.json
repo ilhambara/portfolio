@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"social": "GitHub",
+		"slug": "github.com/ilhambara",
+		"canonical_url": "https://github.com/ilhambara"
+	},
+	{
+		"id": 2,
+		"social": "Dev.to",
+		"slug": "dev.to/ilhambara",
+		"canonical_url": "https://dev.to/ilhambara"
+	},
+	{
+		"id": 3,
+		"social": "Twitter",
+		"slug": "twitter.com/zgve679jdv",
+		"canonical_url": "https://twitter.com/zgve679jdv"
+	},
+	{
+		"id": 4,
+		"social": "Email",
+		"slug": "g2a.ilhammubarok@gmail.com",
+		"canonical_url": "mailto:g2a.ilhammubarok@gmail.com"
+	}
+]

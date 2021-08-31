@@ -47,7 +47,6 @@ export const OpenGraph = () => {
 			<meta name="twitter:site" content={"@zgve679jdv"} />
 			<meta name="twitter:creator" content={"@zgve679jdv"} />
 			<title>Ilham Bara | Next Portfolio</title>
-			<link rel="icon" href="/favicon.ico" />
 		</Head>
 	);
 };

@@ -1,108 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
-
-.page__title {
-  font-size: 1.25rem;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 2rem;
-}
-
-.post__url {
-  padding: 2px 16px;
-  margin: 1.5rem 0;
-  line-height: 1.5;
-  background: #12151d;
-  display: block;
-  border-left: 8px solid #12151d;
-  cursor: pointer;
-}
-
-.post__url:hover {
-  border-left: 8px solid #1da1f2;
-}
-
-.post__url a {
-  color: #1da1f2;
-  text-align: right;
-}
-
-.post__url a:hover {
-  text-decoration: underline;
-}
-
-.text__dimmed {
-  font-family: 'Nunito', Tahoma, Geneva, Verdana, sans-serif;
-  color: #e7e7e7;
-}
-
-/* id posts */
-.posts {
-  max-width: 840px;
-}
-
-.posts h3 {
-  font-size: 2.5rem;
-  padding: 0 3rem;
-}
+/* custom styles for blog post */
 
 .posts__body {
-  font-size: 1.25rem;
-  padding: 1.5rem 3rem;
-  line-height: 1.5;
-  border-radius: 10px;
-  background-color: #12151d;
+	font-size: 1rem;
+	padding: 1.5rem 2.5rem;
+	line-height: 1.5;
+	border-radius: 5px;
+	color: #e2e8f0;
+	background-color: #12151d;
 }
 
 /* per style elements */
 
+.posts__body p {
+	margin: 1rem 0;
+}
+
 .posts__body a {
-  color: #1da1f2;
-  word-wrap: break-word;
-  word-break: break-all;
+	color: #1da1f2;
+	word-wrap: break-word;
+	word-break: break-all;
 }
 
 .posts__body a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .posts__body blockquote {
-  margin-left: 1.5rem;
-  padding-left: 1.5rem;
-  border-left: 8px solid #1da1f2;
+	margin: 1rem;
+	padding-left: 1rem;
+	color: #cbd5e0;
+	font-weight: 700;
+	border-left: 5px solid #1da1f2;
+	font-style: italic;
+}
 
-  font-style: italic;
+.posts__body ol,
+.posts__body ul {
+	margin-left: 1rem;
 }
 
 @media (max-width: 600px) {
-  .main {
-    padding: 2.5rem 0;
-  }
+	.main {
+		padding: 2.5rem 0;
+	}
 
-  .posts h3 {
-    font-size: 2rem;
-    padding: 0 1.75rem;
-    line-height: 1.5;
-  }
+	.posts h3 {
+		font-size: 2rem;
+		padding: 0 1.75rem;
+		line-height: 1.5;
+	}
 
-  .posts__body {
-    padding: 0.5rem 1.75rem;
-  }
+	.posts__body {
+		padding: 1.5rem;
+	}
 
-  .post__url {
-    margin: 1rem 0;
-  }
+	.post__url {
+		margin: 1rem 0;
+	}
 
-  .post__url h3 {
-    font-size: 1.25rem;
-  }
+	.post__url h3 {
+		font-size: 1.25rem;
+	}
 
-  .post__read {
-    margin-top: 1.5rem;
-  }
+	.post__read {
+		margin-top: 1.5rem;
+	}
 }

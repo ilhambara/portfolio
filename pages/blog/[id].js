@@ -1,3 +1,4 @@
+import { Flex, Box, Link, Heading, Text, VStack } from "@chakra-ui/react";
 import Head from "next/head";
 import styles from "../../styles/Blog.module.css";
 import components from "../../styles/Components.module.css";
@@ -30,26 +31,43 @@ export const getStaticProps = async (context) => {
 };
 
 const Posts = ({ post }) => {
+	const getDate = new Date(post.published_at);
+	const displayDate = getDate.toDateString();
+
 	return (
-		<div className={components.container}>
+		<>
 			<Head>
 				<title>{post.title} | Next Portfolio</title>
-				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className={components.main}>
-				<div className={styles.posts}>
-					<h3>{post.title}</h3>
-					<div
-						className={styles.posts__body}
-						dangerouslySetInnerHTML={{ __html: post.body_html }}
-					/>
-				</div>
-				<div className={components.back__button}>
-					<a href="/blog">&larr; Blog</a>
-				</div>
-			</main>
-		</div>
+			<VStack maxW="800px">
+				<Flex
+					flexDirection="column"
+					justifyContent="center"
+					alignItems="center"
+					textAlign="center"
+					w="100%"
+				>
+					<Heading as="h3" mx={4} lineHeight={1.5}>
+						{post.title}
+					</Heading>
+					<Text mx={4} my={6} textColor="gray.300">
+						Published at: {displayDate} ・ {post.reading_time_minutes} min read
+					</Text>
+				</Flex>
+
+				<Box
+					className={styles.posts__body}
+					dangerouslySetInnerHTML={{ __html: post.body_html }}
+				/>
+			</VStack>
+
+			<Flex alignSelf="flex-end">
+				<Link href="/blog" fontSize="xl" fontWeight="semibold" m={4}>
+					&larr; Blog
+				</Link>
+			</Flex>
+		</>
 	);
 };
 

@@ -3,11 +3,11 @@
 		"id": 1,
 		"title": "Projects",
 		"description": "sides, groups, and products",
-		"url": "/projects"
+		"url": "https://project-bara.vercel.app/"
 	},
 	{
 		"id": 2,
-		"title": "Experiencess",
+		"title": "Experiences",
 		"description": "appearances and events",
 		"url": "/experiences"
 	},
@@ -20,7 +20,7 @@
 	{
 		"id": 4,
 		"title": "About",
-		"description": "my personal information",
+		"description": "personal, tech stacks, and socials",
 		"url": "/about"
 	}
 ]
