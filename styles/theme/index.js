@@ -16,7 +16,7 @@ const theme = extendTheme(
 		},
 		fonts: {
 			heading: "Noto Sans",
-			body: "Titillium Web",
+			body: "Source Sans Pro",
 		},
 	}
 );
