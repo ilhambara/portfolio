@@ -7,14 +7,20 @@
 			"Gatsby",
 			"Electron",
 			"Chakra UI",
-			"TailwindCSS",
-			"Bootstrap"
+			"Bootstrap",
+			"TailwindCSS"
 		]
 	},
 	{
 		"id": 2,
 		"title": "Libs & Utils",
-		"items": ["React js", "Styled Components", "SASS/SCSS", "Framer-motion"]
+		"items": [
+			"React.js",
+			"Styled Components",
+			"SASS/SCSS",
+			"Framer-motion",
+			"next-seo"
+		]
 	},
 	{
 		"id": 3,
