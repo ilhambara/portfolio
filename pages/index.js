@@ -21,19 +21,37 @@ export default function Home() {
 					textAlign="center"
 					px={4}
 				>
-					<Heading as="h1" fontSize={["4xl", "5xl"]}>
-						Howdy, I am{" "}
-						<Link
-							textColor="blue.400"
-							href="https://read.cv/ilhambara"
-							isExternal
-						>
-							Bara!
-						</Link>
-					</Heading>
-					<Text fontSize="lg" my={5}>
-						I often introduce myself as a web developer
-					</Text>
+					<motion.div
+						initial="hidden"
+						animate="visible"
+						variants={{
+							hidden: {
+								scale: 0.6,
+								opacity: 0,
+							},
+							visible: {
+								scale: 1,
+								opacity: 1,
+								transition: {
+									delay: 0.3,
+								},
+							},
+						}}
+					>
+						<Heading as="h1" fontSize={["4xl", "5xl"]}>
+							Howdy, I am{" "}
+							<Link
+								textColor="blue.400"
+								href="https://read.cv/ilhambara"
+								isExternal
+							>
+								Bara!
+							</Link>
+						</Heading>
+						<Text fontSize="lg" my={5}>
+							I often introduce myself as a web developer
+						</Text>
+					</motion.div>
 				</Flex>
 				<motion.div
 					drag

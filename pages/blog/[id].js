@@ -47,11 +47,11 @@ const Posts = ({ post }) => {
 					textAlign="center"
 					w="100%"
 				>
-					<Heading as="h3" mx={4} lineHeight={1.5}>
+					<Heading as="h3" px={[4, 8]} lineHeight={1.5}>
 						{post.title}
 					</Heading>
-					<Text mx={4} my={6} textColor="gray.300">
-						Published at: {displayDate} ・ {post.reading_time_minutes} min read
+					<Text mx={4} my={6} textColor="gray.300" opacity={0.8}>
+						{displayDate} ・ {post.reading_time_minutes} min read
 					</Text>
 				</Flex>
 
