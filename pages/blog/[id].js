@@ -1,4 +1,12 @@
-import { Flex, Box, Link, Heading, Text, VStack } from "@chakra-ui/react";
+import {
+	Flex,
+	Box,
+	Link,
+	Heading,
+	Text,
+	VStack,
+	Image,
+} from "@chakra-ui/react";
 import Head from "next/head";
 import Blogs from "../../styles/Blog.module.css";
 
@@ -29,9 +37,14 @@ export const getStaticProps = async (context) => {
 	};
 };
 
-const Posts = ({ post }) => {
+export default function Posts({ post }) {
 	const getDate = new Date(post.published_at);
-	const displayDate = getDate.toDateString();
+	const displayDate = getDate.toLocaleDateString("en-us", {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	});
 
 	return (
 		<>
@@ -50,10 +63,15 @@ const Posts = ({ post }) => {
 					<Heading as="h3" px={[4, 8]} lineHeight={1.5}>
 						{post.title}
 					</Heading>
+
 					<Text mx={4} my={6} textColor="gray.300" opacity={0.8}>
 						{displayDate} ・ {post.reading_time_minutes} min read
 					</Text>
 				</Flex>
+
+				<Box w="100%">
+					<Image src={post.social_image} w="100%" borderRadius="6px 6px 0 0" />
+				</Box>
 
 				<Box
 					className={Blogs.posts__body}
@@ -68,6 +86,4 @@ const Posts = ({ post }) => {
 			</Flex>
 		</>
 	);
-};
-
-export default Posts;
+}

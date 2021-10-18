@@ -31,6 +31,6 @@ Open http://localhost:3000 with your browser to see the result.
 
 ## Tech Stack
 
-**Client:** Next js, Forem DEV, and Framer-motion
+**Client:** Next js, Chakra UI, Forem DEV, and Framer-motion
 
-**Server:** Node (NPM) and Vercel
+**Server:** Node and Vercel

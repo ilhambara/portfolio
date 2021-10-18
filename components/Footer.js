@@ -87,7 +87,7 @@ export const Footer = () => {
 			>
 				<Text fontWeight="medium">© 2021—present Ilham Bara.</Text>
 				<Text fontWeight="medium" textColor="gray.400">
-					version-3.04
+					version-3.05
 				</Text>
 			</Stack>
 		</Flex>
