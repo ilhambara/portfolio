@@ -4,7 +4,7 @@ import { Footer } from "./Footer";
 
 export const Layout = ({ children }) => {
 	return (
-		<Box bgColor="bgMain">
+		<Box bgColor="bgMain" minH="100vh">
 			<Favicon />
 
 			<Container minH="50vh" maxW={["lg", "3xl"]} centerContent>
