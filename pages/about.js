@@ -1,6 +1,6 @@
+import Head from "next/head";
 import data from "../data/about.json";
 import socials from "../data/socials.json";
-import Head from "next/head";
 import {
 	Box,
 	Flex,

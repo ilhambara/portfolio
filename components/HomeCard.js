@@ -1,5 +1,6 @@
+import NextLink from "next/link";
 import data from "../data/home.json";
-import { Link, Text } from "@chakra-ui/react";
+import { Text, Link } from "@chakra-ui/react";
 
 export const HomeCard = () => {
 	return (

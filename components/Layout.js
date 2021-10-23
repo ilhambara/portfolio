@@ -18,9 +18,9 @@ export const Layout = ({ children }) => {
 				>
 					{children}
 				</Flex>
-			</Container>
 
-			<Footer />
+				<Footer />
+			</Container>
 		</Box>
 	);
 };
