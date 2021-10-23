@@ -1,3 +1,5 @@
+import NextLink from "next/link";
+import Head from "next/head";
 import {
 	Box,
 	Heading,
@@ -7,7 +9,6 @@ import {
 	HStack,
 	Flex,
 } from "@chakra-ui/react";
-import Head from "next/head";
 
 const defaultEndpoint = "https://dev.to/api/articles?username=ilhambara";
 
@@ -35,7 +36,8 @@ export default function Blog({ posts }) {
 			</Box>
 
 			<VStack maxW="800px" w="100%" spacing={6}>
-				{posts.map((post) => {
+				{/* exclude first post */}
+				{posts.slice(0, -1).map((post) => {
 					const getDate = new Date(post.published_at);
 					const postDate = getDate.toLocaleDateString("en-us", {
 						year: "numeric",
@@ -44,20 +46,21 @@ export default function Blog({ posts }) {
 					});
 
 					return (
-						<Link
-							key={post.id}
-							href={"/blog/" + post.id}
-							w="100%"
-							bgColor="#12151d"
-							border="1px"
-							borderColor="inherit"
-							borderRadius="6px"
-							_hover={{
-								textDecoration: "none",
-								borderColor: "blue.400",
-							}}
-						>
-							<Box h="100%" w="100%" p={6}>
+						<NextLink key={post.id} href={"/blog/" + post.id}>
+							<Box
+								h="100%"
+								w="100%"
+								p={6}
+								bgColor="#12151d"
+								border="1px"
+								borderColor="inherit"
+								borderRadius="6px"
+								cursor="pointer"
+								_hover={{
+									textDecoration: "none",
+									borderColor: "blue.400",
+								}}
+							>
 								<Heading
 									as="h3"
 									fontSize={["xl", "2xl"]}
@@ -94,15 +97,21 @@ export default function Blog({ posts }) {
 									))}
 								</HStack>
 							</Box>
-						</Link>
+						</NextLink>
 					);
 				})}
 			</VStack>
 
 			<Flex alignSelf="flex-end">
-				<Link href="/" fontSize="xl" fontWeight="semibold" m={4}>
-					&larr; Home
-				</Link>
+				<Box
+					fontSize="xl"
+					fontWeight="semibold"
+					m={4}
+					cursor="pointer"
+					_hover={{ textDecoration: "underline" }}
+				>
+					<NextLink href="/">&larr; Home</NextLink>
+				</Box>
 			</Flex>
 		</>
 	);

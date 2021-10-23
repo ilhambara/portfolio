@@ -1,3 +1,5 @@
+import NextLink from "next/link";
+import Head from "next/head";
 import {
 	Flex,
 	Box,
@@ -7,7 +9,6 @@ import {
 	VStack,
 	Image,
 } from "@chakra-ui/react";
-import Head from "next/head";
 import Blogs from "../../styles/Blog.module.css";
 
 export const getStaticPaths = async () => {
@@ -80,9 +81,15 @@ export default function Posts({ post }) {
 			</VStack>
 
 			<Flex alignSelf="flex-end">
-				<Link href="/blog" fontSize="xl" fontWeight="semibold" m={4}>
-					&larr; Blog
-				</Link>
+				<Box
+					fontSize="xl"
+					fontWeight="semibold"
+					m={4}
+					cursor="pointer"
+					_hover={{ textDecoration: "underline" }}
+				>
+					<NextLink href="/blog">&larr; Blog</NextLink>
+				</Box>
 			</Flex>
 		</>
 	);

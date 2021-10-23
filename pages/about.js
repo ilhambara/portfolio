@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import Head from "next/head";
 import data from "../data/about.json";
 import socials from "../data/socials.json";
@@ -96,9 +97,15 @@ export default function About() {
 			</Flex>
 
 			<Flex alignSelf="flex-end">
-				<Link href="/" fontSize="xl" fontWeight="semibold" m={4}>
-					&larr; Home
-				</Link>
+				<Box
+					fontSize="xl"
+					fontWeight="semibold"
+					m={4}
+					cursor="pointer"
+					_hover={{ textDecoration: "underline" }}
+				>
+					<NextLink href="/">&larr; Home</NextLink>
+				</Box>
 			</Flex>
 		</>
 	);

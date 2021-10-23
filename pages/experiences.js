@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import Head from "next/head";
 import { ExpCard } from "../components/ExpCard";
 import { Box, Flex, Heading, Link } from "@chakra-ui/react";
@@ -20,9 +21,15 @@ export default function Experiences() {
 			</Box>
 
 			<Flex alignSelf="flex-end">
-				<Link href="/" fontSize="xl" fontWeight="semibold" m={4}>
-					&larr; Home
-				</Link>
+				<Box
+					fontSize="xl"
+					fontWeight="semibold"
+					m={4}
+					cursor="pointer"
+					_hover={{ textDecoration: "underline" }}
+				>
+					<NextLink href="/">&larr; Home</NextLink>
+				</Box>
 			</Flex>
 		</>
 	);
