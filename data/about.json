@@ -4,7 +4,6 @@
 		"title": "Frameworks",
 		"items": [
 			"Next.js",
-			"Gatsby",
 			"Electron",
 			"Chakra UI",
 			"Bootstrap",
@@ -30,8 +29,7 @@
 			"Netlify",
 			"Surge.sh",
 			"Github Pages",
-			"cPanel",
-			"Namecheap"
+			"cPanel"
 		]
 	},
 	{
@@ -43,7 +41,6 @@
 			"Notion",
 			"Contentful",
 			"Wordpress",
-			"Codepen",
 			"Visual Studio Code"
 		]
 	}
