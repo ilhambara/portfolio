@@ -11,6 +11,7 @@ export const Layout = ({ children }) => {
         <Flex
           as="main"
           my={[0, 12]}
+          mb={4}
           w="100%"
           flexDirection="column"
           justifyContent="center"

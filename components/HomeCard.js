@@ -9,7 +9,7 @@ export const HomeCard = () => {
         return (
           <NextLink href={home.url} key={home.id}>
             <Box
-              p={["5", "6"]}
+              p={6}
               textAlign="left"
               color="inherit"
               textDecoration="none"

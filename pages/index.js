@@ -40,7 +40,7 @@ export default function Home() {
               },
             }}
           >
-            <Heading as="h1" fontSize={["4xl", "5xl"]} mb={10}>
+            <Heading as="h1" fontSize={["4xl", "5xl"]} mb={[5, 10]}>
               {siteConfig.info.title}{" "}
               <Link
                 textColor="blue.400"
@@ -50,11 +50,12 @@ export default function Home() {
                 {siteConfig.info.link}
               </Link>
             </Heading>
-            <Text fontSize="lg" lineHeight={1.8} textColor="gray.200" my={5}>
+            <Text fontSize="lg" lineHeight={1.8} textColor="gray.300" my={5}>
               {siteConfig.info.desc}
             </Text>
-            <Text fontSize="lg" lineHeight={1.8} textColor="gray.200" my={5}>
-              {siteConfig.info.more}
+            <Text fontSize="lg" lineHeight={1.8} textColor="gray.300" my={5}>
+              {siteConfig.info.more} <i className="twa twa-eyes"></i>{" "}
+              <i className="twa twa-backhand-index-pointing-down"></i>
             </Text>
           </motion.div>
         </Flex>
