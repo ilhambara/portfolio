@@ -3,24 +3,24 @@ import Favicon from "./Favicon";
 import { Footer } from "./Footer";
 
 export const Layout = ({ children }) => {
-	return (
-		<Box bgColor="bgMain" minH="100vh">
-			<Favicon />
+  return (
+    <Box bgColor="bgMain" minH="100vh">
+      <Favicon />
 
-			<Container minH="50vh" maxW={["lg", "3xl"]} centerContent>
-				<Flex
-					as="main"
-					py={12}
-					flex={1}
-					flexDirection="column"
-					justifyContent="center"
-					alignItems="center"
-				>
-					{children}
-				</Flex>
+      <Container minH="50vh" maxW={["lg", "4xl"]} p={6} centerContent>
+        <Flex
+          as="main"
+          my={[0, 12]}
+          w="100%"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          {children}
+        </Flex>
 
-				<Footer />
-			</Container>
-		</Box>
-	);
+        <Footer />
+      </Container>
+    </Box>
+  );
 };
