@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { OpenGraph } from "../components/OpenGraph";
-import { HomeCard } from "../components/HomeCard";
+import { OpenGraph } from "@/components/OpenGraph";
+import { HomeCard } from "@/components/cards/HomeCard";
 import { Grid, Flex, Heading, Link, Text } from "@chakra-ui/react";
-import siteConfig from "../data/siteConfig";
+import siteConfig from "@/config/siteConfig";
 
 export default function Home() {
   return (

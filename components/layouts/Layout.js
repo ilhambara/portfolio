@@ -1,6 +1,6 @@
 import { Box, Container, Flex } from "@chakra-ui/react";
-import Favicon from "./Favicon";
-import { Footer } from "./Footer";
+import Favicon from "../Favicon";
+import { Footer } from "../Footer";
 
 export const Layout = ({ children }) => {
   return (

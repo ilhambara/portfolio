@@ -1,5 +1,5 @@
 import { VStack, StackDivider, Box, Heading, Text } from "@chakra-ui/react";
-import data from "../data/experiences.json";
+import data from "../../data/experiences.json";
 
 export const ExpCard = () => {
   return (

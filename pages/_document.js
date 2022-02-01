@@ -10,7 +10,7 @@ export default class Document extends NextDocument {
           <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/gh/SebastianAigner/twemoji-amazing@1.0.0/twemoji-amazing.css"
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           />
         </Head>
         <body>

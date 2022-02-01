@@ -1,7 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import NextLink from "next/link";
 import Head from "next/head";
-import data from "../data/about.json";
-import socials from "../data/socials.json";
+import data from "@/data/about.json";
+import socials from "@/data/socials.json";
 import {
   Box,
   Flex,

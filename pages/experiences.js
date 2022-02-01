@@ -1,6 +1,6 @@
 import NextLink from "next/link";
 import Head from "next/head";
-import { ExpCard } from "../components/ExpCard";
+import { ExpCard } from "@/components/cards/ExpCard";
 import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 
 export default function Experiences() {
