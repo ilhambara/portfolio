@@ -20,16 +20,19 @@ export default function Experiences() {
         <ExpCard />
       </Box>
 
-      <Flex alignSelf="flex-end">
-        <Box
-          fontSize="xl"
-          fontWeight="semibold"
-          m={4}
-          cursor="pointer"
-          _hover={{ textDecoration: "underline" }}
-        >
-          <NextLink href="/">&larr; Home</NextLink>
-        </Box>
+      <Flex w="100%" justifyContent="flex-end">
+        <NextLink href="/" passHref>
+          <Link
+            fontSize="xl"
+            fontWeight="semibold"
+            my={4}
+            mx={3}
+            cursor="pointer"
+            _hover={{ textDecoration: "underline" }}
+          >
+            &larr; Home
+          </Link>
+        </NextLink>
       </Flex>
     </>
   );

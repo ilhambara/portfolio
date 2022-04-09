@@ -1,50 +1,58 @@
 [
-	{
-		"id": 1,
-		"title": "Hacktoberfest 2020",
-		"role": "Open Source Project Contributor",
-		"description": "A monthlong celebration of open source software run by DigitalOcean.",
-		"time": "October 2020",
-		"tags": ["code", "open source", "collabs"]
-	},
-	{
-		"id": 2,
-		"title": "Global Game Jam Surabaya 2020",
-		"role": "Game Jammer (Programmer & 2D Artist)",
-		"description": "A hackathon focused on game development. It is all condensed into a 48-hour development cycle.",
-		"time": "February 2020",
-		"tags": ["game dev", "collabs", "group project"]
-	},
-	{
-		"id": 3,
-		"title": "Workshop Developer Student Clubs PENS",
-		"role": "Club Member",
-		"description": "A university based community for students interested in Google developer technologies.",
-		"time": "January to February 2020",
-		"tags": ["google", "community", "technologies"]
-	},
-	{
-		"id": 4,
-		"title": "DILo x Cilsy: #DILoDevelopersClass",
-		"role": "Bootcamp Participant",
-		"description": "A bootcamp to learn and build `React JS based app` in a group project.",
-		"time": "November to Desember 2019",
-		"tags": ["bootcamp", "collabs", "group project"]
-	},
-	{
-		"id": 5,
-		"title": "Hacktoberfest 2019",
-		"role": "Open Source Contributor",
-		"description": "A monthlong celebration of open source software run by DigitalOcean.",
-		"time": "October 2019",
-		"tags": ["code", "open source", "collabs"]
-	},
-	{
-		"id": 6,
-		"title": "AndroidDev Surabaya Meetup",
-		"role": "Participant",
-		"description": "An event related to Hacktoberfest 2019. Discussing about Android X and Jetpack library.",
-		"time": "October 2019",
-		"tags": ["meetup", "android", "sharing"]
-	}
+  {
+    "id": 7,
+    "title": "Frontend Engineering CAMP at Ruangguru x Kampus Merdeka",
+    "role": "Frontend Engineering Student",
+    "description": "Intensive bootcamp to be a good Frontend Engineer. This program is a part of \"Magang dan Studi Independen Bersertifikat (MSIB)\" - Kampus Merdeka Batch 2",
+    "time": "February 2022 - Now",
+    "tags": ["bootcamp", "seasonal", "kampus merdeka"]
+  },
+  {
+    "id": 6,
+    "title": "Internship at Dinas Komunikasi dan Informatika",
+    "role": "Web Developer Intern",
+    "description": "3 month internship program as a junior web developer focusing on frontend.",
+    "time": "August - October 2021",
+    "tags": ["intern", "frontend", "web dev"]
+  },
+  {
+    "id": 5,
+    "title": "Hacktoberfest 2020",
+    "role": "Open Source Project Contributor",
+    "description": "A monthlong celebration of open source software run by DigitalOcean.",
+    "time": "October 2020",
+    "tags": ["code", "open source", "collabs"]
+  },
+  {
+    "id": 4,
+    "title": "Global Game Jam Surabaya 2020",
+    "role": "Game Jammer (Programmer & 2D Artist)",
+    "description": "Think of it as a hackathon that focused on game development. It is all condensed into a 48-hour development process.",
+    "time": "February 2020",
+    "tags": ["game dev", "collabs", "group project"]
+  },
+  {
+    "id": 3,
+    "title": "Developer Student Club PENS",
+    "role": "Club Member",
+    "description": "DSC PENS Road To Google Global Solution Challenge 2020 (Web Development Path)",
+    "time": "January - February 2020",
+    "tags": ["google", "community", "technologies"]
+  },
+  {
+    "id": 2,
+    "title": "DILo x Cilsy: #DILoDevelopersClass",
+    "role": "Bootcamp Participant",
+    "description": "A bootcamp to learn and build React JS based app in a group project.",
+    "time": "November to Desember 2019",
+    "tags": ["bootcamp", "collabs", "group project"]
+  },
+  {
+    "id": 1,
+    "title": "Hacktoberfest 2019",
+    "role": "Open Source Contributor",
+    "description": "A monthlong celebration of open source software run by DigitalOcean.",
+    "time": "October 2019",
+    "tags": ["code", "open source", "collabs"]
+  }
 ]
