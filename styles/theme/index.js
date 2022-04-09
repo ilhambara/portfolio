@@ -11,9 +11,15 @@ const config = {
 const theme = extendTheme(
   { config },
   {
-    colors: {
-      bgMain: "#15202b",
+    styles: {
+      global: (props) => ({
+        "html, body": {
+          bgColor: props.colorMode === "dark" ? "#15202b" : "white",
+        },
+      }),
     },
+  },
+  {
     fonts: {
       heading: "Noto Sans",
       body: "Noto Sans",
