@@ -1,8 +1,23 @@
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import { Box, Button, Container, Divider, Heading, HStack, Link, Spacer } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Divider,
+  Heading,
+  HStack,
+  Link,
+  Spacer,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  IconButton,
+} from "@chakra-ui/react";
 import navItems from "@/config/siteConfig";
 import ToggleTheme from "../buttons/toggleTheme";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 const NAV_MENUS = [
   ["Projects", navItems.menus.Projects],
@@ -11,7 +26,7 @@ const NAV_MENUS = [
   ["About", navItems.menus.About],
 ];
 
-export const NavbarDesktop = () => {
+export const NavbarMobile = () => {
   const router = useRouter();
   const active = router.pathname;
 
@@ -27,17 +42,18 @@ export const NavbarDesktop = () => {
 
           <Spacer />
 
-          <HStack spacing={4}>
-            {NAV_MENUS.map(([menu, link]) => (
-              <NextLink key={menu} href={link} passHref>
-                <Button as="a" colorScheme={active == link ? "blue" : ""} variant="ghost">
-                  {menu}
-                </Button>
-              </NextLink>
-            ))}
+          <ToggleTheme />
 
-            <ToggleTheme />
-          </HStack>
+          <Menu>
+            <MenuButton as={IconButton} aria-label="Menus" icon={<HamburgerIcon />} variant="solid" />
+            <MenuList>
+              {NAV_MENUS.map(([menu, link]) => (
+                <NextLink key={menu} href={link} passHref>
+                  <MenuItem>{menu}</MenuItem>
+                </NextLink>
+              ))}
+            </MenuList>
+          </Menu>
         </HStack>
         <Divider />
       </Container>
