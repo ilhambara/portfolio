@@ -1,5 +1,5 @@
-import NextLink from "next/link";
 import Head from "next/head";
+import NextLink from "next/link";
 import { ExpCard } from "@/components/cards/ExpCard";
 import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 
@@ -16,9 +16,7 @@ export default function Experiences() {
         </Heading>
       </Box>
 
-      <Box bgColor="#12151d" borderRadius="5px">
-        <ExpCard />
-      </Box>
+      <ExpCard />
 
       <Flex w="100%" justifyContent="flex-end">
         <NextLink href="/" passHref>

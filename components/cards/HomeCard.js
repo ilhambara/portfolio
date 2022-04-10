@@ -7,7 +7,7 @@ export const HomeCard = () => {
     <>
       {data.map((home) => {
         return (
-          <NextLink href={home.url} key={home.id}>
+          <NextLink href={home.url} key={home.id} passHref>
             <Box
               p={6}
               textAlign="left"

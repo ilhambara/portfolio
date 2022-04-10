@@ -1,11 +1,14 @@
 import Image from "next/image";
+import NextLink from "next/link";
 import { motion } from "framer-motion";
 import { OpenGraph } from "@/components/OpenGraph";
-import { HomeCard } from "@/components/cards/HomeCard";
-import { Grid, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { Grid, Flex, Heading, Link, Text, useColorModeValue, Button, ButtonGroup, LightMode } from "@chakra-ui/react";
+import { GrLinkedin, GrInfo } from "react-icons/gr";
 import siteConfig from "@/config/siteConfig";
 
 export default function Home() {
+  const textColor = useColorModeValue("gray.800", "gray.300");
+
   return (
     <>
       <OpenGraph />
@@ -17,12 +20,7 @@ export default function Home() {
         justifyContent="space-between"
         alignItems="center"
       >
-        <Flex
-          w={["100%", "65%"]}
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-        >
+        <Flex w={["100%", "65%"]} flexDirection="column" alignItems="center" justifyContent="center">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -40,23 +38,37 @@ export default function Home() {
               },
             }}
           >
-            <Heading as="h1" fontSize={["4xl", "5xl"]} mb={[5, 10]}>
+            <Heading as="h1" fontSize={["4xl", "5xl"]} pb={[6, 12]}>
               {siteConfig.info.title}{" "}
-              <Link
-                textColor="blue.400"
-                href={siteConfig.links.ReadCV}
-                isExternal
-              >
+              <Link textColor="blue.400" href={siteConfig.links.primary} isExternal>
                 {siteConfig.info.link}
               </Link>
             </Heading>
-            <Text fontSize="lg" lineHeight={1.8} textColor="gray.300" my={5}>
+            <Text fontSize="lg" lineHeight={1.8} textColor={textColor} pb={6}>
               {siteConfig.info.desc}
             </Text>
-            <Text fontSize="lg" lineHeight={1.8} textColor="gray.300" my={5}>
-              {siteConfig.info.more} <i className="twa twa-eyes"></i>{" "}
+            <Text fontSize="lg" lineHeight={1.8} textColor={textColor} pb={6}>
+              {siteConfig.info.desc2}
+            </Text>
+            <Text fontSize="lg" lineHeight={1.8} textColor={textColor} pb={12}>
+              {siteConfig.info.more} <i className="twa twa-eyes"></i>
               <i className="twa twa-backhand-index-pointing-down"></i>
             </Text>
+
+            <LightMode>
+              <ButtonGroup spacing="4">
+                <NextLink href="https://www.linkedin.com/in/ilhambara" passHref>
+                  <Button as="a" variant="solid" colorScheme="linkedin" leftIcon={<GrLinkedin />} target="_blank">
+                    Ilham Mubarok
+                  </Button>
+                </NextLink>
+                <NextLink href="/about" passHref>
+                  <Button as="a" variant="solid" colorScheme="gray" textColor="black" leftIcon={<GrInfo />}>
+                    About Me
+                  </Button>
+                </NextLink>
+              </ButtonGroup>
+            </LightMode>
           </motion.div>
         </Flex>
 
@@ -74,23 +86,12 @@ export default function Home() {
             bounceDamping: 10,
           }}
         >
-          <Image
-            src="/img/memoji-me.png"
-            width={260}
-            height={260}
-            alt="Home memoji"
-            quality={90}
-          />
+          <Image src="/img/memoji-me.png" width={260} height={260} alt="Home memoji" quality={90} />
         </motion.div>
       </Flex>
 
-      <Grid
-        w="100%"
-        templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
-        gap={8}
-        mb={[12, 0]}
-      >
-        <HomeCard />
+      <Grid w="100%" templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]} gap={8} mb={[12, 0]}>
+        {/* <HomeCard /> */}
       </Grid>
     </>
   );
