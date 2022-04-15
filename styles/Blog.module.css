@@ -58,7 +58,7 @@
   background-color: #2d3748;
   padding: 1rem;
   border-radius: 4px;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .posts__body pre > code {
@@ -93,6 +93,10 @@
 
   .posts__body {
     padding: 1.5rem;
+  }
+
+  .posts__body pre {
+    overflow-x: scroll;
   }
 
   .post__url {
