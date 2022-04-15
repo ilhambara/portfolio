@@ -3,18 +3,13 @@ import NextLink from "next/link";
 import Head from "next/head";
 import data from "@/data/about.json";
 import socials from "@/data/socials.json";
-import {
-  Box,
-  Flex,
-  Grid,
-  Heading,
-  Link,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, Link, ListItem, Text, UnorderedList, useColorModeValue } from "@chakra-ui/react";
 
 export default function About() {
+  const bgColor = useColorModeValue("gray.200", "#12151d");
+  const textColor = useColorModeValue("gray.800", "gray.300");
+  const linkColor = useColorModeValue("blue.600", "blue.400");
+
   return (
     <>
       <Head>
@@ -27,53 +22,32 @@ export default function About() {
         </Heading>
       </Box>
 
-      <Flex
-        flexDirection="column"
-        bgColor="#12151d"
-        p={["6", "12"]}
-        borderRadius="5px"
-      >
+      <Flex flexDirection="column" bgColor={bgColor} p={["6", "12"]} borderRadius="5px">
         <Box>
           <Heading as="h3" fontSize="2xl" mb={6}>
             About
           </Heading>
-          <Text
-            fontSize={["md", "lg"]}
-            my={4}
-            textColor="gray.300"
-            lineHeight={1.8}
-          >
-            I am a final year student majoring Associate's Degree of Informatics
-            Engineering in Electronic Engineering Polytechnic Institute of
-            Surabaya (EEPIS). <i className="twa twa-flag-indonesia"></i>
+          <Text fontSize={["md", "lg"]} my={4} textColor={textColor} lineHeight={1.8}>
+            I am a final year student majoring Associate's Degree of Informatics Engineering at Electronic Engineering
+            Polytechnic Institute of Surabaya (EEPIS) <i className="twa twa-flag-indonesia"></i>.
           </Text>
-          <Text fontSize={["md", "lg"]} textColor="gray.300" lineHeight={1.8}>
-            In most of my time, I contribute to open source projects, explore
-            some useful resources, and take any courses to rank up my skills.
-            Also working on paid projects if there's an opportunity.{" "}
+          <Text fontSize={["md", "lg"]} textColor={textColor} lineHeight={1.8}>
+            In most of my time, I contribute to open source projects, explore some useful resources, and take any
+            courses to rank up my skills. Also working on paid projects if there's an opportunity.{" "}
             <i className="twa twa-man-technologist"></i>
           </Text>
         </Box>
 
         <Box>
-          <Grid
-            templateColumns={["repeat(2, 1fr)", "repeat(4, 1fr)"]}
-            gridGap={4}
-            mt={10}
-          >
+          <Grid templateColumns={["repeat(2, 1fr)", "repeat(4, 1fr)"]} gridGap={4} mt={10}>
             {data.map((skill) => (
               <Box key={skill.id}>
                 <Heading as="h5" fontSize="lg" my={4}>
                   {skill.title}
                 </Heading>
-                <UnorderedList m="unset" textColor="gray.300">
+                <UnorderedList m="unset" textColor={textColor}>
                   {skill.items.map((item) => (
-                    <ListItem
-                      key={item}
-                      listStyleType="none"
-                      fontSize="md"
-                      my={2}
-                    >
+                    <ListItem key={item} listStyleType="none" fontSize="md" my={2}>
                       {item}
                     </ListItem>
                   ))}
@@ -89,14 +63,9 @@ export default function About() {
           </Heading>
           <UnorderedList m="unset">
             {socials.map((social) => (
-              <ListItem
-                key={social.id}
-                listStyleType="none"
-                my={3}
-                textColor="gray.300"
-              >
+              <ListItem key={social.id} listStyleType="none" my={3} textColor={textColor}>
                 {social.social} –{" "}
-                <Box as="span" textColor="blue.400">
+                <Box as="span" textColor={linkColor}>
                   <Link href={social.canonical_url} isExternal>
                     {social.slug}
                   </Link>
@@ -108,13 +77,7 @@ export default function About() {
       </Flex>
 
       <Flex alignSelf="flex-end">
-        <Box
-          fontSize="xl"
-          fontWeight="semibold"
-          m={4}
-          cursor="pointer"
-          _hover={{ textDecoration: "underline" }}
-        >
+        <Box fontSize="xl" fontWeight="semibold" m={4} cursor="pointer" _hover={{ textDecoration: "underline" }}>
           <NextLink href="/">&larr; Home</NextLink>
         </Box>
       </Flex>
