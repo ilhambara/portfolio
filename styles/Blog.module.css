@@ -58,6 +58,7 @@
   background-color: #2d3748;
   padding: 1rem;
   border-radius: 4px;
+  overflow-x: scroll;
 }
 
 .posts__body pre > code {
