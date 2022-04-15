@@ -10,7 +10,7 @@ export default function Experiences() {
         <title>Experiences | Next Portfolio</title>
       </Head>
 
-      <Box mb={10}>
+      <Box textAlign="center" mb={10}>
         <Heading as="h1" fontSize="4xl">
           Experiences
         </Heading>

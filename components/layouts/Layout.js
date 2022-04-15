@@ -11,7 +11,7 @@ export const Layout = ({ children }) => {
       <Container minH="100vh" maxW={["lg", "4xl"]} justifyContent="space-between" centerContent>
         <Navbar />
 
-        <Flex as="main" my={16} mb={4} w="100%" flexDirection="column" justifyContent="center" alignItems="center">
+        <Flex as="main" w="100%" flexDirection="column" py={16}>
           {children}
         </Flex>
 
