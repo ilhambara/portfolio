@@ -15,6 +15,10 @@
   margin: 1.5rem 0;
 }
 
+.posts__body p > strong {
+  font-size: 1.25rem;
+}
+
 .posts__body p:first-child {
   margin: 0 0 1.5rem 0;
 }
@@ -25,6 +29,8 @@
 
 .posts__body a {
   display: inline-block;
+  word-wrap: break-word;
+  word-break: break-all;
   color: #1da1f2;
 }
 

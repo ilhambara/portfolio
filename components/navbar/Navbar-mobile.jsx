@@ -33,7 +33,7 @@ export const NavbarMobile = () => {
   return (
     <>
       <Container as="header" maxW="4xl" px={0}>
-        <HStack as="nav" py={6}>
+        <HStack as="nav" py={6} spacing={4}>
           <NextLink href="/" passHref>
             <Heading as="a" fontSize="xl" fontWeight="bold" letterSpacing="2px">
               {"<Bara/>"}

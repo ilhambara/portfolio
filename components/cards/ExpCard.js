@@ -24,7 +24,7 @@ export const ExpCard = () => {
             <Text pb={2} textColor={textColor} fontWeight="semibold" letterSpacing="0.5px">
               {experience.role}
             </Text>
-            <Text pb={2} color={textColor}>
+            <Text pb={4} color={textColor}>
               {experience.time}
             </Text>
             <Text pb={6} color={textColor} fontSize="14px">

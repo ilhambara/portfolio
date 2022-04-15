@@ -1,1 +1,4 @@
-{}
+{
+  "prettier.printWidth": 120,
+  "discord.detailsEditing": "{workspace}: {git_branch}"
+}
