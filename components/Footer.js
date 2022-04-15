@@ -55,7 +55,7 @@ export const Footer = () => {
             <Text>
               Bara © 2021&ndash;present.{" "}
               <Box as="span" textColor="gray.400">
-                Version-3.05
+                Version 4.
               </Box>
             </Text>
           </VStack>
