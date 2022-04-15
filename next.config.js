@@ -1,4 +1,7 @@
 module.exports = {
+  images: {
+    domains: ["dev.to"],
+  },
   async redirects() {
     return [
       {

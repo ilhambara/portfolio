@@ -1,14 +1,6 @@
 import NextLink from "next/link";
 import Head from "next/head";
-import {
-  Box,
-  Heading,
-  Text,
-  Link,
-  VStack,
-  HStack,
-  Flex,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, Link, VStack, HStack, Flex, Badge, useColorModeValue } from "@chakra-ui/react";
 
 const defaultEndpoint = "https://dev.to/api/articles?username=ilhambara";
 
@@ -23,6 +15,11 @@ export const getStaticProps = async () => {
 };
 
 export default function Blog({ posts }) {
+  const badgeVariant = useColorModeValue("solid", "subtle");
+  const bgColor = useColorModeValue("gray.200", "#12151d");
+  const textColor = useColorModeValue("gray.800", "gray.300");
+  const linkColor = useColorModeValue("blue.600", "blue.400");
+
   return (
     <>
       <Head>
@@ -35,7 +32,7 @@ export default function Blog({ posts }) {
         </Heading>
       </Box>
 
-      <VStack maxW="800px" w="100%" spacing={6}>
+      <VStack w="100%" spacing={6}>
         {/* exclude first post */}
         {posts.slice(0, -1).map((post) => {
           const getDate = new Date(post.published_at);
@@ -51,7 +48,7 @@ export default function Blog({ posts }) {
                 h="100%"
                 w="100%"
                 p={6}
-                bgColor="#12151d"
+                bgColor={bgColor}
                 border="1px"
                 borderColor="inherit"
                 borderRadius="6px"
@@ -61,34 +58,17 @@ export default function Blog({ posts }) {
                   borderColor: "blue.400",
                 }}
               >
-                <Heading
-                  as="h3"
-                  fontSize={["xl", "2xl"]}
-                  textColor="blue.300"
-                  lineHeight={1.6}
-                >
+                <Heading as="h3" fontSize={["xl", "2xl"]} textColor={linkColor} lineHeight={1.6}>
                   {post.title}
                 </Heading>
-                <Text fontSize={["lg", "md"]} textColor="gray.400" my={4}>
+                <Text fontSize={["sm", "md"]} textColor={textColor} my={4}>
                   {postDate}
                 </Text>
                 <HStack w="100%" h="100%" spacing={3}>
                   {post.tag_list.map((tag) => (
-                    <Box
-                      as="span"
-                      key={tag}
-                      display="inline-block"
-                      textColor="gray.300"
-                      bgColor="gray.700"
-                      px={3}
-                      pb={0.5}
-                      my={2}
-                      borderRadius="6px"
-                      fontSize="sm"
-                      fontWeight="semibold"
-                    >
+                    <Badge key={tag} py={0.5} px={1} letterSpacing="0.5px" colorScheme="gray" variant={badgeVariant}>
                       {tag}
-                    </Box>
+                    </Badge>
                   ))}
                 </HStack>
               </Box>
@@ -98,13 +78,7 @@ export default function Blog({ posts }) {
       </VStack>
 
       <Flex alignSelf="flex-end">
-        <Box
-          fontSize="xl"
-          fontWeight="semibold"
-          m={4}
-          cursor="pointer"
-          _hover={{ textDecoration: "underline" }}
-        >
+        <Box fontSize="xl" fontWeight="semibold" m={4} cursor="pointer" _hover={{ textDecoration: "underline" }}>
           <NextLink href="/">&larr; Home</NextLink>
         </Box>
       </Flex>
