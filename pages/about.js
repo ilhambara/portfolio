@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-import NextLink from "next/link";
 import Head from "next/head";
 import data from "@/data/about.json";
 import socials from "@/data/socials.json";
 import { Box, Flex, Grid, Heading, Link, ListItem, Text, UnorderedList, useColorModeValue } from "@chakra-ui/react";
+import BackButton from "@/components/buttons/BackButton";
 
 export default function About() {
   const bgColor = useColorModeValue("gray.200", "#12151d");
@@ -76,11 +76,7 @@ export default function About() {
         </Box>
       </Flex>
 
-      <Flex alignSelf="flex-end">
-        <Box fontSize="xl" fontWeight="semibold" m={4} cursor="pointer" _hover={{ textDecoration: "underline" }}>
-          <NextLink href="/">&larr; Home</NextLink>
-        </Box>
-      </Flex>
+      <BackButton backto="/" name="Home" />
     </>
   );
 }

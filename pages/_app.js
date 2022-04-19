@@ -5,7 +5,6 @@ import * as gtag from "../lib/gtag";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Layout } from "@/components/layouts/Layout";
 import customTheme from "../styles/theme";
-import { AnimatePresence, motion } from "framer-motion";
 import "@fontsource/noto-sans";
 import "@fontsource/source-sans-pro";
 
@@ -24,10 +23,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-      />
+      <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`} />
       <Script
         id="gtag-init"
         strategy="afterInteractive"
@@ -44,22 +40,9 @@ function MyApp({ Component, pageProps }) {
       />
 
       <ChakraProvider theme={customTheme}>
-        <AnimatePresence exitBeforeEnter initial={true}>
-          <motion.div
-            key={router.route}
-            animate="enter"
-            exit="exit"
-            variants={{
-              initial: { opacity: 0, y: -25 },
-              enter: { opacity: 1, y: 0 },
-              exit: { opacity: 0, y: 25 },
-            }}
-          >
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </motion.div>
-        </AnimatePresence>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ChakraProvider>
     </>
   );

@@ -1,7 +1,7 @@
 import Head from "next/head";
-import NextLink from "next/link";
 import { ExpCard } from "@/components/cards/ExpCard";
-import { Box, Flex, Heading, Link } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
+import BackButton from "@/components/buttons/BackButton";
 
 export default function Experiences() {
   return (
@@ -18,20 +18,7 @@ export default function Experiences() {
 
       <ExpCard />
 
-      <Flex w="100%" justifyContent="flex-end">
-        <NextLink href="/" passHref>
-          <Link
-            fontSize="xl"
-            fontWeight="semibold"
-            my={4}
-            mx={3}
-            cursor="pointer"
-            _hover={{ textDecoration: "underline" }}
-          >
-            &larr; Home
-          </Link>
-        </NextLink>
-      </Flex>
+      <BackButton backto="/" name="Home" />
     </>
   );
 }

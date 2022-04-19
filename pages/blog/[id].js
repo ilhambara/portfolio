@@ -3,7 +3,8 @@ import NextImage from "next/image";
 import Head from "next/head";
 import { Flex, Box, Link, Heading, Text, VStack, Image, useColorModeValue } from "@chakra-ui/react";
 import Blogs from "../../styles/Blog.module.css";
-import BlogButtonGroup from "@/components/buttons/blogButtonGroup";
+import BlogButtonGroup from "@/components/buttons/BlogButtonGroup";
+import BackButton from "@/components/buttons/BackButton";
 
 export const getStaticPaths = async () => {
   const res = await fetch("https://dev.to/api/articles?username=ilhambara");
@@ -85,11 +86,7 @@ export default function Posts({ post }) {
         />
       </VStack>
 
-      <Flex alignSelf="flex-end">
-        <Box fontSize="xl" fontWeight="semibold" m={4} cursor="pointer" _hover={{ textDecoration: "underline" }}>
-          <NextLink href="/blog">&larr; Blog</NextLink>
-        </Box>
-      </Flex>
+      <BackButton backto="/blog" name="Blog" />
     </>
   );
 }

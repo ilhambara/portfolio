@@ -14,7 +14,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import navItems from "@/config/siteConfig";
-import ToggleTheme from "../buttons/toggleTheme";
+import ToggleTheme from "../buttons/ToggleTheme";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
 const NAV_MENUS = [
