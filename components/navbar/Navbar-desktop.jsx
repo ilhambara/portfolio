@@ -17,7 +17,7 @@ export const NavbarDesktop = () => {
 
   return (
     <>
-      <Container as="header" maxW="4xl" px={0}>
+      <Container as="header" maxW="4xl" px={0} display={["none", "block"]}>
         <HStack as="nav" py={6}>
           <NextLink href="/" passHref>
             <Heading as="a" fontSize="xl" fontWeight="bold" letterSpacing="2px">
