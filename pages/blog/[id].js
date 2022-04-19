@@ -3,8 +3,8 @@ import NextImage from "next/image";
 import Head from "next/head";
 import { Flex, Box, Link, Heading, Text, VStack, Image, useColorModeValue } from "@chakra-ui/react";
 import Blogs from "../../styles/Blog.module.css";
-import BlogButtonGroup from "@/components/buttons/BlogButtonGroup";
 import BackButton from "@/components/buttons/BackButton";
+import BlogButtonGroup from "@/components/buttons/blogButtonGroup";
 
 export const getStaticPaths = async () => {
   const res = await fetch("https://dev.to/api/articles?username=ilhambara");

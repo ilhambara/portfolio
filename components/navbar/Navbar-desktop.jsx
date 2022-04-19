@@ -2,7 +2,7 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { Button, Container, Divider, Heading, HStack, Spacer } from "@chakra-ui/react";
 import navItems from "@/config/siteConfig";
-import ToggleTheme from "../buttons/ToggleTheme";
+import ToggleTheme from "../buttons/toggleTheme";
 
 const NAV_MENUS = [
   ["Projects", navItems.menus.Projects],
