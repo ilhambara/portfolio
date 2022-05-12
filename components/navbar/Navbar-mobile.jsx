@@ -1,7 +1,6 @@
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import {
-  Container,
   Divider,
   Heading,
   HStack,
@@ -12,6 +11,7 @@ import {
   MenuItem,
   IconButton,
   useColorModeValue,
+  VStack,
 } from "@chakra-ui/react";
 import navItems from "@/config/siteConfig";
 import ToggleTheme from "../buttons/toggleTheme";
@@ -32,8 +32,8 @@ export const NavbarMobile = () => {
 
   return (
     <>
-      <Container as="header" maxW="4xl" px={0}>
-        <HStack as="nav" py={6} spacing={3}>
+      <VStack as="header" w="full" pt={4}>
+        <HStack as="nav" w="full" h={16} spacing={3}>
           <NextLink href="/" passHref>
             <Heading as="a" fontSize="xl" fontWeight="bold" letterSpacing="2px">
               {"<Bara/>"}
@@ -56,7 +56,7 @@ export const NavbarMobile = () => {
           </Menu>
         </HStack>
         <Divider />
-      </Container>
+      </VStack>
     </>
   );
 };
