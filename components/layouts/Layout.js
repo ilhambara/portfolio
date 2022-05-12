@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { Box, Container, Flex } from "@chakra-ui/react";
+import { Container, Flex } from "@chakra-ui/react";
 import Favicon from "../Favicon";
 import { Footer } from "../Footer";
 import { Navbar } from "../navbar/Navbar";
@@ -9,13 +9,22 @@ export const Layout = ({ children }) => {
   const router = useRouter();
 
   return (
-    <Box bgColor="bgMain" minH="100vh">
+    <>
       <Favicon />
 
-      <Container minH="100vh" maxW={["lg", "4xl"]} justifyContent="space-between" centerContent>
+      <Container
+        display="flex"
+        flexDirection="column"
+        maxW="container.lg"
+        w="full"
+        minH="100vh"
+        h="full"
+        justifyContent="space-between"
+        centerContent
+      >
         <Navbar />
 
-        <Flex as="main" w="100%" flexDirection="column" py={16}>
+        <Flex as="main" w="100%" direction="column" py={16}>
           <AnimatePresence exitBeforeEnter initial={true}>
             <motion.div
               key={router.route}
@@ -34,6 +43,6 @@ export const Layout = ({ children }) => {
 
         <Footer />
       </Container>
-    </Box>
+    </>
   );
 };
