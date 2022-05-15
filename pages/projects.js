@@ -1,3 +1,4 @@
+import { ProjectCard } from "@/components/cards/ProjectCard";
 import { Flex, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Text, VStack } from "@chakra-ui/react";
 import Head from "next/head";
 
@@ -20,17 +21,23 @@ export default function Projects() {
         </VStack>
 
         <Flex w="full">
-          <Tabs variant="soft-rounded" colorScheme="green">
+          <Tabs w="full" minH="50vh" variant="line" colorScheme="blue">
             <TabList>
               <Tab>Tab 1</Tab>
               <Tab>Tab 2</Tab>
+              <Tab>Tab 3</Tab>
             </TabList>
-            <TabPanels>
-              <TabPanel>
-                <p>one!</p>
+
+            <TabPanels pt={4}>
+              <TabPanel px={0}>
+                <ProjectCard />
               </TabPanel>
-              <TabPanel>
-                <p>two!</p>
+              <TabPanel px={0}>
+                <p>Second Tab!</p>
+              </TabPanel>
+              <TabPanel px={0}>
+                <p>Third Tab!</p>
+                <p>belum tau mau diisi apa</p>
               </TabPanel>
             </TabPanels>
           </Tabs>
