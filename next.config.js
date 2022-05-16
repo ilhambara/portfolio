@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ["dev.to"],
+    domains: ["dev.to", "picsum.photos"],
   },
   async redirects() {
     return [
