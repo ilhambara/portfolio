@@ -9,11 +9,11 @@ module.exports = {
         destination: "https://campsite.bio/ilhambara",
         permanent: true,
       },
-      // {
-      //   source: "/projects",
-      //   destination: "https://project.barathrum.studio",
-      //   permanent: false,
-      // },
+      {
+        source: "/projects",
+        destination: "https://project.barathrum.studio",
+        permanent: false,
+      },
     ];
   },
 };
