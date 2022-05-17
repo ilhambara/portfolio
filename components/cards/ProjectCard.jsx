@@ -1,10 +1,21 @@
 import NextImage from "next/image";
-import { Box, ButtonGroup, Flex, Heading, IconButton, Stack, Text, useColorModeValue, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  ButtonGroup,
+  Flex,
+  Heading,
+  IconButton,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue,
+  VStack,
+} from "@chakra-ui/react";
 import { VscGithub, VscRocket } from "react-icons/vsc";
 
-export const ProjectCard = ({ project }) => {
-  const { title, description, thumbnail } = project.fields;
-  const { width, height } = thumbnail.fields.file.details.image;
+export const ProjectCard = ({ title, description, link, preview, thumbnail }) => {
+  const { file } = thumbnail;
+  const { width, height } = thumbnail.file.details.image;
 
   const bgImg = useColorModeValue("gray.400", "gray.700");
   const bgImgHover = useColorModeValue("gray.300", "gray.800");
@@ -30,22 +41,22 @@ export const ProjectCard = ({ project }) => {
             justify="end"
             align="end"
             pos="relative"
-            bottom="-16px"
+            bottom={["-20px", "-16px"]}
             boxShadow="xl"
-            transition="0.3s"
             borderRadius={4}
+            transition="0.3s"
             overflow="hidden"
-            _hover={{ transform: `translate(0, -8px)`, boxShadow: "md", cursor: "pointer" }}
+            _hover={{ transform: `translate(0, -10px)`, boxShadow: "md", cursor: "pointer" }}
           >
             <NextImage
               width={width}
               height={height}
               objectFit="contain"
-              src={"https:" + thumbnail.fields.file.url}
+              src={"https:" + file.url}
               alt="project thumbnail"
-              blurDataURL={"https:" + thumbnail.fields.file.url}
+              blurDataURL={"https:" + file.url}
               placeholder="blur"
-              quality={94}
+              quality={90}
             />
           </Flex>
         </Flex>
@@ -60,8 +71,13 @@ export const ProjectCard = ({ project }) => {
           </VStack>
 
           <ButtonGroup w="full" justifyContent="end" variant="ghost" spacing={2} pb={[4, 0]}>
-            <IconButton colorScheme="gray" aria-label="Preview Button" icon={<VscGithub size={24} />} />
-            <IconButton colorScheme="blue" aria-label="Preview Button" icon={<VscRocket size={24} />} />
+            <Link href={link} display={link ? "block" : "none"} isExternal>
+              <IconButton colorScheme="gray" aria-label="Preview Button" icon={<VscGithub size={24} />} />
+            </Link>
+
+            <Link href={preview} display={preview ? "block" : "none"} isExternal>
+              <IconButton colorScheme="blue" aria-label="Preview Button" icon={<VscRocket size={24} />} />
+            </Link>
           </ButtonGroup>
         </VStack>
       </Stack>
