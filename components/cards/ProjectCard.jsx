@@ -13,9 +13,9 @@ import {
 } from "@chakra-ui/react";
 import { VscGithub, VscRocket } from "react-icons/vsc";
 
-export const ProjectCard = ({ title, description, link, preview, thumbnail }) => {
-  const { file } = thumbnail;
-  const { width, height } = thumbnail.file.details.image;
+export const ProjectCard = ({ project }) => {
+  const { title, description, link, preview, thumbnail } = project.fields;
+  const { width, height } = thumbnail.fields.file.details.image;
 
   const bgImg = useColorModeValue("gray.400", "gray.700");
   const bgImgHover = useColorModeValue("gray.300", "gray.800");
@@ -52,9 +52,9 @@ export const ProjectCard = ({ title, description, link, preview, thumbnail }) =>
               width={width}
               height={height}
               objectFit="contain"
-              src={"https:" + file.url}
+              src={"https:" + thumbnail.fields.file.url}
               alt="project thumbnail"
-              blurDataURL={"https:" + file.url}
+              blurDataURL={"https:" + thumbnail.fields.file.url}
               placeholder="blur"
               quality={90}
             />

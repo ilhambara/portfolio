@@ -1,4 +1,6 @@
-import fetchEntries from "utils/contentful";
+// import fetchEntries from "utils/contentful";
+import { createClient } from "contentful";
+
 import { ProjectCard } from "@/components/cards/ProjectCard";
 import { Flex, Heading, Link, Tab, TabList, TabPanel, TabPanels, Tabs, Text, VStack } from "@chakra-ui/react";
 import Head from "next/head";
@@ -30,18 +32,9 @@ export default function Projects({ projects }) {
           <TabPanels pt={8}>
             <TabPanel px={0}>
               <VStack spacing={8}>
-                {projects.map((p, key) => {
-                  if (p.category == "Websites") {
-                    return (
-                      <ProjectCard
-                        key={key}
-                        title={p.title}
-                        description={p.description}
-                        link={p.repository}
-                        preview={p.preview}
-                        thumbnail={p.thumbnail.fields}
-                      />
-                    );
+                {projects.map((project, key) => {
+                  if (project.fields.category == "Websites") {
+                    return <ProjectCard key={key} project={project} />;
                   }
                 })}
               </VStack>
@@ -49,18 +42,9 @@ export default function Projects({ projects }) {
 
             <TabPanel px={0}>
               <VStack spacing={8}>
-                {projects.map((p, key) => {
-                  if (p.category == "Codes") {
-                    return (
-                      <ProjectCard
-                        key={key}
-                        title={p.title}
-                        description={p.description}
-                        link={p.repository}
-                        preview={p.preview}
-                        thumbnail={p.thumbnail.fields}
-                      />
-                    );
+                {projects.map((project, key) => {
+                  if (project.fields.category == "Codes") {
+                    return <ProjectCard key={key} project={project} />;
                   }
                 })}
               </VStack>
@@ -68,36 +52,15 @@ export default function Projects({ projects }) {
 
             <TabPanel px={0}>
               <VStack spacing={8}>
-                {projects.map((p, key) => {
-                  if (p.category == "Products") {
-                    return (
-                      <ProjectCard
-                        key={key}
-                        title={p.title}
-                        description={p.description}
-                        link={p.repository}
-                        preview={p.preview}
-                        thumbnail={p.thumbnail.fields}
-                      />
-                    );
+                {projects.map((project, key) => {
+                  if (project.fields.category == "Products") {
+                    return <ProjectCard key={key} project={project} />;
                   }
                 })}
               </VStack>
             </TabPanel>
 
-            <TabPanel px={0}>
-              <VStack w="full" align="start" spacing={4}>
-                {projects.map((p, key) => {
-                  if (p.category == "Others") {
-                    return (
-                      <Link key={key} href={p.repository} fontSize={["sm", "md"]} color="blue.300" isExternal>
-                        - {p.title}: {p.repository}
-                      </Link>
-                    );
-                  }
-                })}
-              </VStack>
-            </TabPanel>
+            <TabPanel px={0}>TBD.</TabPanel>
           </TabPanels>
         </Tabs>
       </VStack>
@@ -106,14 +69,14 @@ export default function Projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetchEntries();
-  const projects = res.map((p) => {
-    return p.fields;
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
+  const res = await client.getEntries({ content_type: "projects" });
+
   return {
-    props: {
-      projects,
-    },
+    props: { projects: res.items },
   };
 }
