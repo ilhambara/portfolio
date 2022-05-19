@@ -2,8 +2,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { Container, Flex } from "@chakra-ui/react";
 import Favicon from "../Favicon";
-import { Footer } from "../Footer";
-import { Navbar } from "../navbar/Navbar";
+import { Footer } from "@/components/footer/Footer";
+import { Navbar } from "@/components/navbar/Navbar";
 
 export const Layout = ({ children }) => {
   const router = useRouter();
@@ -21,10 +21,11 @@ export const Layout = ({ children }) => {
         h="full"
         justifyContent="space-between"
         centerContent
+        overflowX="hidden"
       >
         <Navbar />
 
-        <Flex as="main" w="100%" direction="column" py={16}>
+        <Flex as="main" w="full" direction="column" py={16}>
           <AnimatePresence exitBeforeEnter initial={true}>
             <motion.div
               key={router.route}

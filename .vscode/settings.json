@@ -1,4 +1,4 @@
 {
   "prettier.printWidth": 120,
-  "discord.detailsEditing": "(contentful): {git_branch}"
+  "discord.detailsEditing": "branch: {git_branch}"
 }

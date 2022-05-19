@@ -35,7 +35,14 @@ export const NavbarMobile = () => {
       <VStack as="header" w="full" pt={4}>
         <HStack as="nav" w="full" h={16} spacing={3}>
           <NextLink href="/" passHref>
-            <Heading as="a" fontSize="xl" fontWeight="bold" letterSpacing="2px">
+            <Heading
+              as="a"
+              fontSize="xl"
+              fontWeight="bold"
+              letterSpacing="2px"
+              bgGradient="linear(to-l, blue.200, teal.400)"
+              bgClip="text"
+            >
               {"<Bara/>"}
             </Heading>
           </NextLink>

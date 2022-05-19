@@ -1,7 +1,19 @@
 import fetchEntries from "lib/contentful";
-
 import { ProjectCard } from "@/components/cards/ProjectCard";
-import { Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Text, VStack } from "@chakra-ui/react";
+import { ProjectLink } from "@/components/link/ProjectLink";
+import {
+  Badge,
+  Heading,
+  HStack,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  Text,
+  UnorderedList,
+  VStack,
+} from "@chakra-ui/react";
 import Head from "next/head";
 
 const TAB_LISTS = ["Websites", "Codes", "Products", "Others"];
@@ -15,6 +27,11 @@ export default function Projects({ projects }) {
 
       <VStack spacing={16}>
         <VStack w="full" align="start" spacing={8}>
+          <HStack>
+            <Badge colorScheme="green">new</Badge>
+            <Badge colorScheme="orange">under development</Badge>
+          </HStack>
+
           <Heading as="h1">Projects</Heading>
           <Text opacity={0.75}>Description? TBD.</Text>
         </VStack>
@@ -41,9 +58,9 @@ export default function Projects({ projects }) {
           <TabPanels pt={8}>
             <TabPanel px={0}>
               <VStack spacing={8}>
-                {projects.map((project, key) => {
+                {projects.map((project, index) => {
                   if (project.category == "Websites") {
-                    return <ProjectCard key={key} project={project} />;
+                    return <ProjectCard key={index} project={project} />;
                   }
                 })}
               </VStack>
@@ -51,9 +68,9 @@ export default function Projects({ projects }) {
 
             <TabPanel px={0}>
               <VStack spacing={8}>
-                {projects.map((project, key) => {
+                {projects.map((project, index) => {
                   if (project.category == "Codes") {
-                    return <ProjectCard key={key} project={project} />;
+                    return <ProjectCard key={index} project={project} />;
                   }
                 })}
               </VStack>
@@ -69,7 +86,17 @@ export default function Projects({ projects }) {
               </VStack>
             </TabPanel>
 
-            <TabPanel px={0}>TBD.</TabPanel>
+            <TabPanel px={2}>
+              <VStack align="start" spacing={8}>
+                <UnorderedList spacing={4}>
+                  {projects.map((project, index) => {
+                    if (project.category == "Others") {
+                      return <ProjectLink key={index} project={project} />;
+                    }
+                  })}
+                </UnorderedList>
+              </VStack>
+            </TabPanel>
           </TabPanels>
         </Tabs>
       </VStack>
