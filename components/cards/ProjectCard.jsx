@@ -1,9 +1,9 @@
 import NextImage from "next/image";
 import { ButtonGroup, Flex, Heading, IconButton, Link, Stack, Text, useColorModeValue, VStack } from "@chakra-ui/react";
-import { VscGithub, VscRocket } from "react-icons/vsc";
+import { VscGithub, VscInfo, VscRocket } from "react-icons/vsc";
 
 export const ProjectCard = ({ project }) => {
-  const { title, description, repository, preview, thumbnail } = project;
+  const { title, description, repository, preview, information, thumbnail } = project;
   const { width, height } = project.thumbnail.fields.file.details.image;
 
   const bgImg = useColorModeValue("gray.400", "gray.700");
@@ -61,11 +61,15 @@ export const ProjectCard = ({ project }) => {
 
           <ButtonGroup w="full" justifyContent="end" variant="ghost" spacing={2} pb={[4, 0]}>
             <Link href={repository} display={repository ? "block" : "none"} isExternal>
-              <IconButton colorScheme="gray" aria-label="Preview Button" icon={<VscGithub size={24} />} />
+              <IconButton colorScheme="gray" aria-label="Repository Button" icon={<VscGithub size={24} />} />
             </Link>
 
             <Link href={preview} display={preview ? "block" : "none"} isExternal>
               <IconButton colorScheme="blue" aria-label="Preview Button" icon={<VscRocket size={24} />} />
+            </Link>
+
+            <Link href={information} display={information ? "block" : "none"} isExternal>
+              <IconButton colorScheme="yellow" aria-label="Information Button" icon={<VscInfo size={24} />} />
             </Link>
           </ButtonGroup>
         </VStack>

@@ -20,7 +20,14 @@ export const NavbarDesktop = () => {
       <HStack as="header" w="full" display={["none", "block"]}>
         <HStack as="nav" py={6}>
           <NextLink href="/" passHref>
-            <Heading as="a" fontSize="xl" fontWeight="bold" letterSpacing="2px">
+            <Heading
+              as="a"
+              fontSize="xl"
+              fontWeight="black"
+              letterSpacing="2px"
+              bgGradient="linear(to-l, blue.200, teal.400)"
+              bgClip="text"
+            >
               {"<Bara/>"}
             </Heading>
           </NextLink>

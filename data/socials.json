@@ -16,5 +16,11 @@
     "social": "Dev.to",
     "slug": "dev.to/ilhambara",
     "canonical_url": "https://dev.to/ilhambara"
+  },
+  {
+    "id": 4,
+    "social": "Instagram",
+    "slug": "instagram.com/ilham.bara",
+    "canonical_url": "https://www.instagram.com/ilham.bara/"
   }
 ]
