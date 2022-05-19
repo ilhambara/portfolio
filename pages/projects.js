@@ -1,8 +1,7 @@
-// import fetchEntries from "utils/contentful";
-import { createClient } from "contentful";
+import fetchEntries from "lib/contentful";
 
 import { ProjectCard } from "@/components/cards/ProjectCard";
-import { Flex, Heading, Link, Tab, TabList, TabPanel, TabPanels, Tabs, Text, VStack } from "@chakra-ui/react";
+import { Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Text, VStack } from "@chakra-ui/react";
 import Head from "next/head";
 
 const TAB_LISTS = ["Websites", "Codes", "Products", "Others"];
@@ -20,7 +19,17 @@ export default function Projects({ projects }) {
           <Text opacity={0.75}>Description? TBD.</Text>
         </VStack>
 
-        <Tabs w="full" minH="50vh" size="sm" variant="line" colorScheme="blue" isFitted>
+        <Tabs
+          lazyBehavior="unmount"
+          isLazy={true}
+          isManual
+          w="full"
+          minH="50vh"
+          size="sm"
+          variant="line"
+          colorScheme="blue"
+          isFitted
+        >
           <TabList>
             {TAB_LISTS.map((category, index) => (
               <Tab key={index} fontWeight="semibold" pb={3}>
@@ -33,7 +42,7 @@ export default function Projects({ projects }) {
             <TabPanel px={0}>
               <VStack spacing={8}>
                 {projects.map((project, key) => {
-                  if (project.fields.category == "Websites") {
+                  if (project.category == "Websites") {
                     return <ProjectCard key={key} project={project} />;
                   }
                 })}
@@ -43,7 +52,7 @@ export default function Projects({ projects }) {
             <TabPanel px={0}>
               <VStack spacing={8}>
                 {projects.map((project, key) => {
-                  if (project.fields.category == "Codes") {
+                  if (project.category == "Codes") {
                     return <ProjectCard key={key} project={project} />;
                   }
                 })}
@@ -53,7 +62,7 @@ export default function Projects({ projects }) {
             <TabPanel px={0}>
               <VStack spacing={8}>
                 {projects.map((project, key) => {
-                  if (project.fields.category == "Products") {
+                  if (project.category == "Products") {
                     return <ProjectCard key={key} project={project} />;
                   }
                 })}
@@ -69,15 +78,14 @@ export default function Projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  const res = await fetchEntries();
+  const projects = res.map((p) => {
+    return p.fields;
   });
 
-  const res = await client.getEntries({ content_type: "projects" });
-
   return {
-    props: { projects: res.items },
-    revalidate: 1,
+    props: {
+      projects,
+    },
   };
 }
