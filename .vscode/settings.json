@@ -1,4 +1,4 @@
 {
   "prettier.printWidth": 120,
-  "discord.detailsEditing": "branch: {git_branch}"
+  "discord.detailsEditing": "({git_branch}): refactor"
 }

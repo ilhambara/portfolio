@@ -3,10 +3,10 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import * as gtag from "@/lib/gtag";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Layout } from "@/components/layouts/Layout";
-import customTheme from "../styles/theme";
+import { Layout } from "@/components/layout/Layout";
+import customTheme from "@/styles/theme";
 import "@fontsource/noto-sans";
-import "@fontsource/source-sans-pro";
+import "@fontsource/inter";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

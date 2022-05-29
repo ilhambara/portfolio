@@ -1,27 +1,16 @@
 import Image from "next/image";
 import NextLink from "next/link";
 import { motion } from "framer-motion";
-import { OpenGraph } from "@/components/OpenGraph";
-import {
-  Box,
-  Heading,
-  Link,
-  Text,
-  useColorModeValue,
-  Button,
-  ButtonGroup,
-  LightMode,
-  VStack,
-  Stack,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, useColorModeValue, Button, ButtonGroup, LightMode, VStack, Stack } from "@chakra-ui/react";
 import { GrLinkedin, GrInfo } from "react-icons/gr";
 import siteConfig from "@/config/siteConfig";
-import { NowPlaying } from "@/components/NowPlaying";
+import { OpenGraph } from "@/components/OpenGraph";
+import { InlineLink } from "@/components/link/InlineLink";
+import { Latest } from "@/components/sections/Latest";
 
 export default function Home() {
   const bgColor = useColorModeValue("gray.200", "gray.900");
   const textColor = useColorModeValue("gray.800", "gray.300");
-  const linkColor = useColorModeValue("blue.600", "blue.400");
 
   const target = siteConfig.links;
 
@@ -29,74 +18,63 @@ export default function Home() {
     <>
       <OpenGraph />
 
-      <VStack h="full" justify="space-around">
-        <Stack h="full" direction={["column-reverse", "row"]} justify="space-between" align="center" spacing={[16, 2]}>
-          <VStack w={["100%", "65%"]} fontSize={["md", "lg"]} textAlign="left" spacing={8}>
-            <Box w="100%">
-              <Heading as="h1" fontSize={["4xl", "5xl"]}>
-                {siteConfig.info.title}{" "}
-                <Link textColor={linkColor} href={target.primary} isExternal>
-                  {siteConfig.info.link}
-                </Link>
-              </Heading>
-            </Box>
-            <Box w="100%">
-              <Text lineHeight={1.8} textColor={textColor}>
-                {siteConfig.info.desc}
-              </Text>
-            </Box>
-            <Box w="100%">
-              <Text lineHeight={1.8} textColor={textColor}>
-                Doing Frontend Engineering on MSIB{" "}
-                <Link textColor={linkColor} fontWeight="semibold" href={target.kampusMerdeka} isExternal>
-                  Kampus Merdeka
-                </Link>
-                , Maintaining some Open-source projects, Also an Average Racecar Driver in Forza Horizon 4.
-              </Text>
-            </Box>
-            <Box w="100%">
-              <Text lineHeight={1.8} textColor={textColor}>
-                {siteConfig.info.more} <i className="twa twa-eyes"></i>
-                <i className="twa twa-backhand-index-pointing-down"></i>
-              </Text>
-            </Box>
+      <Stack h="full" direction={["column-reverse", "row"]} justify="space-between" align="center" spacing={[16, 2]}>
+        <VStack w={["full", "65%"]} fontSize={["md", "lg"]} align="start" spacing={[8, 12]}>
+          <Heading as="h1" fontSize={["4xl", "5xl"]}>
+            {siteConfig.info.title} <InlineLink href={target.primary} name={siteConfig.info.link} />
+          </Heading>
 
-            <LightMode>
-              <ButtonGroup w="100%" spacing="4">
-                <NextLink href="https://www.linkedin.com/in/ilhambara" passHref>
-                  <Button as="a" variant="solid" colorScheme="linkedin" leftIcon={<GrLinkedin />} target="_blank">
-                    Ilham Mubarok
-                  </Button>
-                </NextLink>
-                <NextLink href="/about" passHref>
-                  <Button as="a" variant="solid" colorScheme="gray" textColor="black" leftIcon={<GrInfo />}>
-                    About Me
-                  </Button>
-                </NextLink>
-              </ButtonGroup>
-            </LightMode>
+          <VStack w="full" align="start" lineHeight={1.8} textColor={textColor} spacing={6}>
+            <Text>{siteConfig.info.desc}</Text>
+
+            <Text>
+              Doing Frontend Engineering on MSIB <InlineLink href={target.kampusMerdeka} name="Kampus Merdeka" />,
+              Maintaining some Open-source projects, Also an Average Racecar Driver in Forza Horizon 4.
+            </Text>
+
+            <Text>
+              {siteConfig.info.more} <i className="twa twa-eyes"></i>
+              <i className="twa twa-backhand-index-pointing-down"></i>
+            </Text>
           </VStack>
 
-          <Box bgColor={bgColor} borderRadius="full">
-            <motion.div
-              drag
-              dragConstraints={{
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0,
-              }}
-              dragElastic={0.15}
-              dragTransition={{
-                bounceStiffness: 600,
-                bounceDamping: 10,
-              }}
-            >
-              <Image src="/img/memoji-me.png" width={260} height={260} alt="Home memoji" />
-            </motion.div>
-          </Box>
-        </Stack>
-      </VStack>
+          <LightMode>
+            <ButtonGroup w="full" spacing="4">
+              <NextLink href="https://www.linkedin.com/in/ilhambara" passHref>
+                <Button as="a" variant="solid" colorScheme="linkedin" leftIcon={<GrLinkedin />} target="_blank">
+                  Ilham Mubarok
+                </Button>
+              </NextLink>
+              <NextLink href="/about" passHref>
+                <Button as="a" variant="solid" colorScheme="gray" textColor="black" leftIcon={<GrInfo />}>
+                  About Me
+                </Button>
+              </NextLink>
+            </ButtonGroup>
+          </LightMode>
+        </VStack>
+
+        <Box bgColor={bgColor} borderRadius="full">
+          <motion.div
+            drag
+            dragConstraints={{
+              left: 0,
+              right: 0,
+              top: 0,
+              bottom: 0,
+            }}
+            dragElastic={0.15}
+            dragTransition={{
+              bounceStiffness: 600,
+              bounceDamping: 10,
+            }}
+          >
+            <Image src="/img/memoji-me.png" width={260} height={260} alt="Home memoji" />
+          </motion.div>
+        </Box>
+      </Stack>
+
+      <Latest />
     </>
   );
 }

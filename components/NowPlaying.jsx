@@ -14,7 +14,7 @@ export const NowPlaying = () => {
 
   return (
     <>
-      <HStack as="section" w="full" minW={0} justify="space-between" py={2} mt={[16, 0]}>
+      <HStack as="section" w="full" minW={0} justify="space-between" py={2}>
         <HStack>
           <Icon as={FaSpotify} color="#1db954" />
 

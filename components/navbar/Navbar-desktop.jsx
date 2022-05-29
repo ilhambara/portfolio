@@ -22,7 +22,7 @@ export const NavbarDesktop = () => {
           <NextLink href="/" passHref>
             <Heading
               as="a"
-              fontSize="xl"
+              fontSize="2xl"
               fontWeight="black"
               letterSpacing="2px"
               bgGradient="linear(to-l, blue.200, teal.400)"
@@ -46,8 +46,9 @@ export const NavbarDesktop = () => {
             <ToggleTheme />
           </HStack>
         </HStack>
-        <Divider />
       </HStack>
+
+      <Divider />
     </>
   );
 };

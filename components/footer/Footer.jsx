@@ -12,10 +12,10 @@ export const Footer = () => {
 
   return (
     <>
-      <VStack as="footer" w="full">
+      <VStack as="footer" w="full" minH={64}>
         {path == "/" ? <NowPlaying /> : null}
 
-        <VStack as="section" w="full" pb={[16, 8]}>
+        <VStack as="section" w="full">
           <Divider />
 
           <Stack
@@ -24,7 +24,7 @@ export const Footer = () => {
             direction={["column-reverse", "row"]}
             align={["center", "start"]}
             justify="space-between"
-            pt={8}
+            py={12}
             spacing={[8, 0]}
           >
             <VStack align={["center", "start"]} fontSize="sm" textColor={textColor} spacing={4}>

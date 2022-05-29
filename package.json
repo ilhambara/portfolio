@@ -14,6 +14,7 @@
     "@chakra-ui/react": "^1.6.6",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@fontsource/inter": "^4.5.10",
     "@fontsource/noto-sans": "^4.5.0",
     "@fontsource/source-sans-pro": "^4.5.0",
     "contentful": "^9.1.28",

@@ -23,8 +23,8 @@ export const Socials = () => {
             <IconButton
               aria-label={label}
               icon={<Icon as={AsIcon} boxSize={6} color={linkColor} />}
-              w={10}
-              h={10}
+              w={12}
+              h={12}
               bgColor={color}
               colorScheme="gray"
               borderRadius="full"
