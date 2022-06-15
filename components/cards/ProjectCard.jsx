@@ -14,7 +14,7 @@ export const ProjectCard = ({ project }) => {
 
   return (
     <>
-      <Stack direction={["column", "row"]} w="full" minH="300px" bgColor={bgColor} borderRadius={4} spacing={2}>
+      <Stack direction={["column", "row"]} w="full" minH="270px" bgColor={bgColor} borderRadius={4} spacing={2}>
         <Flex
           w={["full", "50%"]}
           justify="center"
@@ -30,12 +30,12 @@ export const ProjectCard = ({ project }) => {
             justify="end"
             align="end"
             pos="relative"
-            bottom={["-20px", "-16px"]}
+            bottom={["-16px", "-12px"]}
             boxShadow="xl"
             borderRadius={4}
             transition="0.3s"
             overflow="hidden"
-            _hover={{ transform: `translate(0, -10px)`, boxShadow: "md", cursor: "pointer" }}
+            _hover={{ transform: `translate(0, -6px)`, boxShadow: "md", cursor: "pointer" }}
           >
             <NextImage
               width={width}
