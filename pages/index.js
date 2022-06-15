@@ -19,7 +19,7 @@ export default function Home() {
       <OpenGraph />
 
       <Stack h="full" direction={["column-reverse", "row"]} justify="space-between" align="center" spacing={[16, 2]}>
-        <VStack w={["full", "65%"]} fontSize={["md", "lg"]} align="start" spacing={[8, 12]}>
+        <VStack w={["full", "60%"]} fontSize={["md", "lg"]} align="start" spacing={[8, 12]}>
           <Heading as="h1" fontSize={["4xl", "5xl"]}>
             {siteConfig.info.title} <InlineLink href={target.primary} name={siteConfig.info.link} />
           </Heading>
@@ -54,7 +54,7 @@ export default function Home() {
           </LightMode>
         </VStack>
 
-        <Box bgColor={bgColor} borderRadius="full">
+        <Box maxW={["14rem", "full"]} bgColor={bgColor} borderRadius="full" p={[2, 4]}>
           <motion.div
             drag
             dragConstraints={{
