@@ -2,27 +2,21 @@
   {
     "id": 1,
     "title": "Frameworks",
-    "items": ["Next.js", "Chakra UI", "Bootstrap", "TailwindCSS"]
+    "items": ["Next.js", "Chakra UI", "Bootstrap", "TailwindCSS", "Laravel"]
   },
   {
     "id": 2,
     "title": "Libs & Utils",
-    "items": [
-      "React.js",
-      "Styled Components",
-      "Contentful",
-      "Framer-motion",
-      "next-seo"
-    ]
+    "items": ["React.js", "Styled Components", "Contentful", "Framer Motion", "Axios", "next-seo"]
   },
   {
     "id": 3,
     "title": "Infrastructures",
-    "items": ["Vercel", "Netlify", "Surge.sh", "Github Pages", "cPanel"]
+    "items": ["Vercel", "Netlify", "cPanel"]
   },
   {
     "id": 4,
     "title": "Other Tools",
-    "items": ["Git", "Figma", "Notion", "Wordpress", "Visual Studio Code"]
+    "items": ["Git", "Figma", "Wordpress", "Visual Studio Code"]
   }
 ]
