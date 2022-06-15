@@ -1,4 +1,5 @@
-import fetchEntries from "lib/contentful";
+import Head from "next/head";
+import fetchEntries from "@/lib/contentful";
 import { ProjectCard } from "@/components/cards/ProjectCard";
 import { ProjectLink } from "@/components/link/ProjectLink";
 import {
@@ -14,11 +15,23 @@ import {
   UnorderedList,
   VStack,
 } from "@chakra-ui/react";
-import Head from "next/head";
 
-const TAB_LISTS = ["Websites", "Codes", "Products", "Others"];
+export async function getStaticProps() {
+  const res = await fetchEntries();
+  const projects = res.map((p) => {
+    return p.fields;
+  });
+
+  return {
+    props: {
+      projects,
+    },
+  };
+}
 
 export default function Projects({ projects }) {
+  const TAB_LISTS = ["Websites", "Codes", "Products", "Others"];
+
   return (
     <>
       <Head>
@@ -59,9 +72,7 @@ export default function Projects({ projects }) {
             <TabPanel px={0}>
               <VStack spacing={8}>
                 {projects.map((project, index) => {
-                  if (project.category == "Websites") {
-                    return <ProjectCard key={index} project={project} />;
-                  }
+                  return project.category == "Websites" ? <ProjectCard key={index} project={project} /> : null;
                 })}
               </VStack>
             </TabPanel>
@@ -69,19 +80,15 @@ export default function Projects({ projects }) {
             <TabPanel px={0}>
               <VStack spacing={8}>
                 {projects.map((project, index) => {
-                  if (project.category == "Codes") {
-                    return <ProjectCard key={index} project={project} />;
-                  }
+                  return project.category == "Codes" ? <ProjectCard key={index} project={project} /> : null;
                 })}
               </VStack>
             </TabPanel>
 
             <TabPanel px={0}>
               <VStack spacing={8}>
-                {projects.map((project, key) => {
-                  if (project.category == "Products") {
-                    return <ProjectCard key={key} project={project} />;
-                  }
+                {projects.map((project, index) => {
+                  return project.category == "Products" ? <ProjectCard key={index} project={project} /> : null;
                 })}
               </VStack>
             </TabPanel>
@@ -90,9 +97,7 @@ export default function Projects({ projects }) {
               <VStack align="start" spacing={8}>
                 <UnorderedList spacing={4}>
                   {projects.map((project, index) => {
-                    if (project.category == "Others") {
-                      return <ProjectLink key={index} project={project} />;
-                    }
+                    return project.category == "Others" ? <ProjectLink key={index} project={project} /> : null;
                   })}
                 </UnorderedList>
               </VStack>
@@ -102,17 +107,4 @@ export default function Projects({ projects }) {
       </VStack>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const res = await fetchEntries();
-  const projects = res.map((p) => {
-    return p.fields;
-  });
-
-  return {
-    props: {
-      projects,
-    },
-  };
 }

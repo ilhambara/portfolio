@@ -2,7 +2,7 @@
 import Head from "next/head";
 import data from "@/data/about.json";
 import socials from "@/data/socials.json";
-import { Box, Flex, Grid, Heading, Link, ListItem, Text, UnorderedList, useColorModeValue } from "@chakra-ui/react";
+import { Box, Grid, Heading, Link, ListItem, Text, UnorderedList, useColorModeValue, VStack } from "@chakra-ui/react";
 import BackButton from "@/components/buttons/BackButton";
 
 export default function About() {
@@ -22,45 +22,52 @@ export default function About() {
         </Heading>
       </Box>
 
-      <Flex flexDirection="column" bgColor={bgColor} p={["6", "12"]} borderRadius="5px">
-        <Box>
+      <VStack w="full" bgColor={bgColor} p={["6", "12"]} borderRadius="5px" spacing={[8, 16]}>
+        <Box w="full">
           <Heading as="h3" fontSize="2xl" mb={6}>
             About
           </Heading>
-          <Text fontSize={["md", "lg"]} my={4} textColor={textColor} lineHeight={1.8}>
-            I am a final year student majoring Associate's Degree of Informatics Engineering at Electronic Engineering
-            Polytechnic Institute of Surabaya (EEPIS) <i className="twa twa-flag-indonesia"></i>.
-          </Text>
-          <Text fontSize={["md", "lg"]} textColor={textColor} lineHeight={1.8}>
-            In most of my time, I contribute to open source projects, explore some useful resources, and take any
-            courses to rank up my skills. Also working on paid projects if there's an opportunity.{" "}
-            <i className="twa twa-man-technologist"></i>
-          </Text>
+
+          <VStack fontSize={["md", "lg"]} textColor={textColor} lineHeight={1.8} spacing={6}>
+            <Text>
+              I am a final-year student majoring Associate's Degree of Informatics Engineering at Electronic Engineering
+              Polytechnic Institute of Surabaya (EEPIS). <i className="twa twa-flag-indonesia"></i>
+            </Text>
+            <Text>
+              Focusing on technologies for Frontend Web Development with JavaScript-based ecosystems. Such as Next.js,
+              Chakra UI, and Headless CMS like Contentful, DatoCMS, or the one provided by Netlify. I could also open to
+              projects that use Laravel if necessary. <i className="twa twa-books"></i>
+            </Text>
+            <Text>
+              In most of my time, I contribute to open source projects, explore some useful resources, and take any
+              courses to rank up my skills. Also working on paid projects if there's an opportunity.{" "}
+              <i className="twa twa-man-technologist"></i>
+            </Text>
+          </VStack>
         </Box>
 
-        <Box>
-          <Grid templateColumns={["repeat(2, 1fr)", "repeat(4, 1fr)"]} gridGap={4} mt={10}>
-            {data.map((skill) => (
-              <Box key={skill.id}>
-                <Heading as="h5" fontSize="lg" my={4}>
-                  {skill.title}
-                </Heading>
-                <UnorderedList m="unset" textColor={textColor}>
-                  {skill.items.map((item) => (
-                    <ListItem key={item} listStyleType="none" fontSize="md" my={2}>
-                      {item}
-                    </ListItem>
-                  ))}
-                </UnorderedList>
-              </Box>
-            ))}
-          </Grid>
-        </Box>
+        <Grid w="full" templateColumns={["repeat(2, 1fr)", "repeat(4, 1fr)"]} gridGap={4}>
+          {data.map((skill) => (
+            <Box key={skill.id}>
+              <Heading as="h5" fontSize="lg" my={4}>
+                {skill.title}
+              </Heading>
+              <UnorderedList m="unset" textColor={textColor}>
+                {skill.items.map((item) => (
+                  <ListItem key={item} listStyleType="none" fontSize="md" my={2}>
+                    {item}
+                  </ListItem>
+                ))}
+              </UnorderedList>
+            </Box>
+          ))}
+        </Grid>
 
-        <Box>
-          <Heading as="h3" fontSize="2xl" mt={10} mb={6}>
+        <Box w="full">
+          <Heading as="h3" fontSize="2xl" mb={6}>
             Socials
           </Heading>
+
           <UnorderedList m="unset">
             {socials.map((social) => (
               <ListItem key={social.id} listStyleType="none" my={3} textColor={textColor}>
@@ -74,7 +81,7 @@ export default function About() {
             ))}
           </UnorderedList>
         </Box>
-      </Flex>
+      </VStack>
 
       <BackButton backto="/" name="Home" />
     </>

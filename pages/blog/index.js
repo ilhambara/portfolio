@@ -3,15 +3,15 @@ import Head from "next/head";
 import { Box, Heading, Text, Link, VStack, HStack, Flex, Badge, useColorModeValue } from "@chakra-ui/react";
 import BackButton from "@/components/buttons/BackButton";
 
-const defaultEndpoint = "https://dev.to/api/articles?username=ilhambara";
-
 export const getStaticProps = async () => {
+  const defaultEndpoint = "https://dev.to/api/articles?username=ilhambara";
+
   const res = await fetch(defaultEndpoint);
   const data = await res.json();
 
   return {
     props: { posts: data },
-    revalidate: 5, //in seconds
+    revalidate: 1, //in seconds
   };
 };
 
@@ -48,7 +48,7 @@ export default function Blog({ posts }) {
               <Box
                 h="100%"
                 w="100%"
-                p={6}
+                p={8}
                 bgColor={bgColor}
                 border="1px"
                 borderColor="inherit"
@@ -62,10 +62,15 @@ export default function Blog({ posts }) {
                 <Heading as="h3" fontSize={["xl", "2xl"]} textColor={linkColor} lineHeight={1.6}>
                   {post.title}
                 </Heading>
-                <Text fontSize={["sm", "md"]} textColor={textColor} my={4}>
-                  {postDate}
-                </Text>
-                <HStack w="100%" h="100%" spacing={3} overflowX={["scroll", "hidden"]}>
+
+                <HStack py={4}>
+                  <i className="twa twa-four-o-clock"></i>{" "}
+                  <Text fontSize={["sm", "md"]} textColor={textColor}>
+                    {postDate}
+                  </Text>
+                </HStack>
+
+                <HStack w="100%" h="100%" spacing={3} overflowX={["scroll", "hidden"]} pt={4}>
                   {post.tag_list.map((tag) => (
                     <Badge key={tag} py={0.5} px={1} letterSpacing="0.5px" colorScheme="gray" variant={badgeVariant}>
                       {tag}
