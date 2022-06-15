@@ -44,7 +44,6 @@ export default function Posts({ post }) {
 
   const bgColor = useColorModeValue("gray.200", "#12151d");
   const textColor = useColorModeValue("gray.800", "gray.300");
-  const linkColor = useColorModeValue("blue.600", "blue.400");
 
   return (
     <>
@@ -52,9 +51,9 @@ export default function Posts({ post }) {
         <title>{post.title} | Next Portfolio</title>
       </Head>
 
-      <VStack>
-        <VStack spacing={8} textAlign="center" w="100%">
-          <Heading as="h3" px={[4, 8]} lineHeight={1.6}>
+      <VStack spacing={4}>
+        <VStack spacing={8} textAlign="center" w="100%" mb={16}>
+          <Heading as="h1" lineHeight={1.6}>
             {post.title}
           </Heading>
 
@@ -65,10 +64,10 @@ export default function Posts({ post }) {
           <BlogButtonGroup canonicalURL={post.canonical_url} />
         </VStack>
 
-        <Box w="100%" h="100%" pt={4}>
+        <Box w="full" bgColor="#3a4a5b">
           <NextImage
-            width="1080"
-            height="640"
+            width="1128"
+            height="600"
             objectFit="contain"
             src={post.social_image}
             alt="dev.to social_image"
