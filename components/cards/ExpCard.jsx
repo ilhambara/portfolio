@@ -1,4 +1,5 @@
-import { VStack, StackDivider, Box, Heading, Text, Badge, useColorModeValue } from "@chakra-ui/react";
+import { VStack, StackDivider, Box, Heading, Text, Badge, useColorModeValue, HStack } from "@chakra-ui/react";
+import { TimeIcon } from "@chakra-ui/icons";
 import data from "../../data/experiences.json";
 
 export const ExpCard = () => {
@@ -18,20 +19,28 @@ export const ExpCard = () => {
       {data.map((experience) => {
         return (
           <Box h="100%" w="100%" key={experience.id}>
-            <Heading pb={6} as="h3" fontSize={["xl", "2xl"]} textColor={linkColor}>
+            <Heading as="h3" fontSize={["xl", "2xl"]} textColor={linkColor} lineHeight={1.6} pb={8}>
               {experience.title}
             </Heading>
-            <Text pb={2} textColor={textColor} fontWeight="semibold" letterSpacing="0.5px">
-              {experience.role}
-            </Text>
-            <Text pb={4} color={textColor}>
-              {experience.time}
-            </Text>
-            <Text pb={6} color={textColor} fontSize="14px">
-              {experience.description}
-            </Text>
 
-            <Box w="100%">
+            <VStack w="full" align="start" textColor={textColor} spacing={4}>
+              <HStack>
+                <i className="twa twa-man-technologist"></i>{" "}
+                <Text fontWeight="semibold" letterSpacing="0.5px">
+                  {experience.role}
+                </Text>
+              </HStack>
+
+              <HStack>
+                <i className="twa twa-four-o-clock"></i> <Text>{experience.time}</Text>
+              </HStack>
+
+              <Text fontSize={["sm", "md"]} lineHeight={1.8} opacity={0.75}>
+                {experience.description}
+              </Text>
+            </VStack>
+
+            <Box w="full" pt={8}>
               {experience.tags.map((tag) => {
                 // to color the badge based on value
                 var badgeScheme = "gray";
@@ -46,13 +55,11 @@ export const ExpCard = () => {
                   badgeScheme = "purple";
                 }
 
-                // tag == "bootcamp" ? "blue" : tag == "code" ? "green" : tag == "collabs" ? "orange" : "gray"
-
                 return (
                   <Badge
                     key={tag}
-                    py={0.5}
                     px={1}
+                    my={2}
                     mr={3}
                     letterSpacing="0.5px"
                     colorScheme={badgeScheme}
