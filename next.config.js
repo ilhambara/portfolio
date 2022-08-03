@@ -1,4 +1,6 @@
-module.exports = {
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
     domains: ["dev.to", "images.ctfassets.net"],
   },
@@ -12,3 +14,5 @@ module.exports = {
     ];
   },
 };
+
+module.exports = nextConfig;
