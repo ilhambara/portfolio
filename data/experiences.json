@@ -3,15 +3,15 @@
     "id": 7,
     "title": "Frontend Engineering CAMP at Ruangguru x Kampus Merdeka",
     "role": "Frontend Engineering Student",
-    "description": "Intensive bootcamp to be a good Frontend Engineer. This program is a part of \"Magang dan Studi Independen Bersertifikat (MSIB)\" - Kampus Merdeka Batch 2",
-    "time": "February 2022 - Now",
+    "description": "Intensive bootcamp to be a good Frontend Engineer. This program is a part of \"Magang dan Studi Independen Bersertifikat (MSIB)\" - Kampus Merdeka Batch 2.",
+    "time": "February - July 2022",
     "tags": ["bootcamp", "seasonal", "kampus merdeka"]
   },
   {
     "id": 6,
     "title": "Internship at Dinas Komunikasi dan Informatika",
     "role": "Web Developer Intern",
-    "description": "3 month internship program as a junior web developer focusing on frontend.",
+    "description": "3 month internship program as a junior web developer focusing on frontend web using Code Igniter and Bootstrap.",
     "time": "August - October 2021",
     "tags": ["intern", "frontend", "web dev"]
   },
@@ -35,7 +35,7 @@
     "id": 3,
     "title": "Developer Student Club PENS",
     "role": "Club Member",
-    "description": "DSC PENS Road To Google Global Solution Challenge 2020 (Web Development Path)",
+    "description": "DSC PENS Road To Google Global Solution Challenge 2020 (Web Development Path).",
     "time": "January - February 2020",
     "tags": ["google", "community", "technologies"]
   },

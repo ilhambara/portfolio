@@ -9,9 +9,9 @@ export const OpenGraph = () => {
       <meta charSet="UTF-8" />
       <meta content="ie=edge" httpEquiv="X-UA-Compatible" />
       <meta name="description" content={config.info.desc} />
-      <meta property="og:url" content={"https://ilhambara.vercel.app/"} key="ogurl" />
+      <meta property="og:url" content={"https://barathrum.studio"} key="ogurl" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={"Bara // Portfolio Website"} key="ogtitle" />
+      <meta property="og:title" content={"Ilham Mubarok // Portfolio Website"} key="ogtitle" />
       <meta property="og:site_name" content={"Ilham Bara | Next Portfolio"} key="ogsitename" />
       <meta property="og:description" content={config.info.desc} key="ogdesc" />
       <meta property="og:image" content={OG_IMAGE} />

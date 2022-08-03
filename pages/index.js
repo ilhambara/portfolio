@@ -28,8 +28,8 @@ export default function Home() {
             <Text>{siteConfig.info.desc}</Text>
 
             <Text>
-              Doing Frontend Engineering on MSIB <InlineLink href={target.kampusMerdeka} name="Kampus Merdeka" />,
-              Maintaining some Open-source projects, Also an Average Racecar Driver in Forza Horizon 4.
+              Previously participated in a Frontend Engineering Bootcamp as a part of{" "}
+              <InlineLink href={target.kampusMerdeka} name="Studi Independen - Kampus Merdeka" /> Batch 2.
             </Text>
 
             <Text>
@@ -69,7 +69,7 @@ export default function Home() {
               bounceDamping: 10,
             }}
           >
-            <Image src="/img/memoji-me.png" width={260} height={260} alt="Home memoji" />
+            <Image src="/img/memoji-me.png" width={260} height={260} alt="Home memoji" priority={true} />
           </motion.div>
         </Box>
       </Stack>

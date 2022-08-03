@@ -1,18 +1,18 @@
 [
   {
     "id": 2,
-    "title": "The Zeitplan",
-    "desc": "Slicing Design: Zeitplan - using Next.js, Chakra UI, and Deployed to Cloudflare Pages.",
-    "url": "https://github.com/ilhambara/slice-ui-zeitplan",
-    "date": "May 11, 2022",
+    "title": "Your Next Chakra ⚡️",
+    "desc": "Starter template for Next.js and Chakra UI projects.",
+    "url": "https://github.com/ilhambara/your-next-chakra",
+    "date": "Jul 28, 2022",
     "tag": "project"
   },
   {
     "id": 1,
-    "title": "Learn: Write Clean and Maintainable CSS for Future Use",
-    "desc": "The 5 important points that I have learned in writing CSS code to make it maintainable for our next projects.",
-    "url": "https://dev.to/ilhambara/learn-write-clean-and-maintainable-css-for-future-use-1a9o",
-    "date": "Jan 6, 2022",
-    "tag": "article"
+    "title": "Future Map 📝",
+    "desc": "Final Project of Engineering 53 - Study Independent Batch 2 at Ruangguru.",
+    "url": "https://github.com/ilhambara/futuremap",
+    "date": "Jun 27, 2022",
+    "tag": "project"
   }
 ]

@@ -24,23 +24,19 @@ export default function About() {
 
       <VStack w="full" bgColor={bgColor} p={["6", "12"]} borderRadius="5px" spacing={[8, 16]}>
         <Box w="full">
-          <Heading as="h3" fontSize="2xl" mb={6}>
-            About
-          </Heading>
-
           <VStack fontSize={["md", "lg"]} textColor={textColor} lineHeight={1.8} spacing={6}>
             <Text>
               I am a final-year student majoring Associate's Degree of Informatics Engineering at Electronic Engineering
               Polytechnic Institute of Surabaya (EEPIS). <i className="twa twa-flag-indonesia"></i>
             </Text>
             <Text>
-              Focusing on technologies for Frontend Web Development with JavaScript-based ecosystems. Such as Next.js,
-              Chakra UI, and Headless CMS like Contentful, DatoCMS, or the one provided by Netlify. I could also open to
-              projects that use Laravel if necessary. <i className="twa twa-books"></i>
+              Focusing on technologies for Frontend Web Development with JavaScript-based ecosystems, such as Next.js,
+              Chakra UI, and Headless CMS (Contentful, DatoCMS, or the one provided by Netlify).{" "}
+              <i className="twa twa-books"></i>
             </Text>
             <Text>
-              In most of my time, I contribute to open source projects, explore some useful resources, and take any
-              courses to rank up my skills. Also working on paid projects if there's an opportunity.{" "}
+              In most of my time, I often contribute to open source projects, explore some useful resources, and taking
+              any courses to rank up my skills. Also working on paid projects if there's an opportunity.{" "}
               <i className="twa twa-man-technologist"></i>
             </Text>
           </VStack>
