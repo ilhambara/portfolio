@@ -28,7 +28,7 @@ export const Footer = () => {
             spacing={[8, 0]}
           >
             <VStack align={["center", "start"]} fontSize="sm" textColor={textColor} spacing={4}>
-              <Text lineHeight={1.8}>
+              <Text align="center" lineHeight={1.8}>
                 Developed using <InlineLink href="https://nextjs.org/" name="Next.js" />
                 {", "}
                 <InlineLink href="https://chakra-ui.com/" name="Chakra UI" />
