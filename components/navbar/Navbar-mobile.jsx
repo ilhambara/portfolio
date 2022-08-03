@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import navItems from "@/config/siteConfig";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import ToggleTheme from "@/components/buttons/ToggleTheme";
+import SwitchTheme from "@/components/buttons/SwitchTheme";
 
 const NAV_MENUS = [
   ["Home", "/"],
@@ -50,7 +50,7 @@ export const NavbarMobile = () => {
 
           <Spacer />
 
-          <ToggleTheme variant="outline" />
+          <SwitchTheme variant="outline" />
 
           <Menu>
             <MenuButton as={IconButton} aria-label="Mobile menu" icon={<HamburgerIcon />} variant="solid" />
