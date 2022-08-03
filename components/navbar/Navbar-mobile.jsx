@@ -14,10 +14,11 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import navItems from "@/config/siteConfig";
-import ToggleTheme from "../buttons/toggleTheme";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import ToggleTheme from "@/components/buttons/ToggleTheme";
 
 const NAV_MENUS = [
+  ["Home", "/"],
   ["Projects", navItems.menus.Projects],
   ["Experiences", navItems.menus.Experiences],
   ["Blog", navItems.menus.Blog],
@@ -49,14 +50,16 @@ export const NavbarMobile = () => {
 
           <Spacer />
 
-          <ToggleTheme />
+          <ToggleTheme variant="outline" />
 
           <Menu>
-            <MenuButton as={IconButton} aria-label="Menu" icon={<HamburgerIcon />} variant="solid" />
+            <MenuButton as={IconButton} aria-label="Mobile menu" icon={<HamburgerIcon />} variant="solid" />
             <MenuList>
               {NAV_MENUS.map(([menu, link]) => (
                 <NextLink key={menu} href={link} passHref>
-                  <MenuItem color={active == link ? `${linkColor}` : ""}>{menu}</MenuItem>
+                  <MenuItem as="a" color={active == link ? linkColor : ""}>
+                    {menu}
+                  </MenuItem>
                 </NextLink>
               ))}
             </MenuList>

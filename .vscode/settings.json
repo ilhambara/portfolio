@@ -1,4 +1,5 @@
 {
   "prettier.printWidth": 120,
-  "discord.detailsEditing": "({git_branch}): refactor"
+  "workbench.editor.showTabs": true,
+  "discord.detailsEditing": "branch: {git_branch}"
 }

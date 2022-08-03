@@ -2,7 +2,7 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { Button, Container, Divider, Heading, HStack, Spacer } from "@chakra-ui/react";
 import navItems from "@/config/siteConfig";
-import ToggleTheme from "../buttons/toggleTheme";
+import ToggleTheme from "@/components/buttons/ToggleTheme";
 
 const NAV_MENUS = [
   ["Projects", navItems.menus.Projects],
@@ -43,7 +43,7 @@ export const NavbarDesktop = () => {
               </NextLink>
             ))}
 
-            <ToggleTheme />
+            <ToggleTheme variant="solid" />
           </HStack>
         </HStack>
       </HStack>
